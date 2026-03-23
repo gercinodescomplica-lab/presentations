@@ -1,0 +1,202 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #05070A;
+  --surface: #0B0F14;
+  --surface-2: #111820;
+  --blue: #2F80FF;
+  --cyan: #00E5FF;
+  --blue-glow: rgba(47, 128, 255, 0.35);
+  --cyan-glow: rgba(0, 229, 255, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fullscreen: force background so the ::backdrop doesn't show as black */
+:fullscreen { background: var(--bg); }
+:-webkit-full-screen { background: var(--bg); }
+:-moz-full-screen { background: var(--bg); }
+::backdrop { background: var(--bg); }
+::-webkit-backdrop { background: var(--bg); }
+
+/* Custom scrollbar (hidden globally) */
+::-webkit-scrollbar { display: none; }
+
+/* Selection */
+::selection {
+  background: rgba(47, 128, 255, 0.3);
+  color: #fff;
+}
+
+/* Glow utility */
+.glow-blue {
+  box-shadow: 0 0 40px rgba(47, 128, 255, 0.25), 0 0 80px rgba(47, 128, 255, 0.1);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.2), 0 0 60px rgba(0, 229, 255, 0.08);
+}
+
+.text-glow-blue {
+  text-shadow: 0 0 20px rgba(47, 128, 255, 0.6), 0 0 40px rgba(47, 128, 255, 0.3);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 20px rgba(0, 229, 255, 0.7), 0 0 40px rgba(0, 229, 255, 0.3);
+}
+
+/* Grid background */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(47, 128, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(47, 128, 255, 0.045) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Noise texture overlay */
+.noise::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* Slide transitions */
+.slide-enter { opacity: 0; transform: translateX(60px); }
+.slide-enter-active { opacity: 1; transform: translateX(0); transition: all 500ms cubic-bezier(0.22, 1, 0.36, 1); }
+.slide-exit { opacity: 1; transform: translateX(0); }
+.slide-exit-active { opacity: 0; transform: translateX(-60px); transition: all 500ms cubic-bezier(0.22, 1, 0.36, 1); }
+
+/* Scanline animation */
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+@keyframes flicker {
+  0%, 97%, 100% { opacity: 1; }
+  98% { opacity: 0.85; }
+  99% { opacity: 0.95; }
+}
+
+@keyframes dash {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes particle-float {
+  0%, 100% { transform: translateY(0) translateX(0); opacity: 0.6; }
+  33% { transform: translateY(-20px) translateX(10px); opacity: 1; }
+  66% { transform: translateY(-10px) translateX(-8px); opacity: 0.8; }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes counter-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+/* ── Print / PDF ────────────────────────────────────────────────────────────── */
+
+.print-only { display: none; }
+
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 0;
+  }
+
+  /* Force exact colors — without this browsers strip all backgrounds */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Allow body to scroll through all pages */
+  html, body {
+    overflow: visible !important;
+    height: auto !important;
+    width: 297mm !important;
+  }
+
+  /* Hide everything except the print container. */
+  body > * { display: none !important; }
+
+  .print-only {
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 297mm;
+  }
+
+  .print-slide-page {
+    width: 297mm;
+    height: 210mm;
+    overflow: hidden;
+    position: relative;
+    display: flex !important;
+    break-after: page;
+    page-break-after: always;
+    background: #05070A;
+  }
+
+  .print-slide-page:last-child {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+}
+
+@keyframes data-flow {
+  0% { stroke-dashoffset: 1000; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0; }
+}
+
+.animate-rotate-slow {
+  animation: rotate-slow 20s linear infinite;
+}
+
+.animate-counter-rotate {
+  animation: counter-rotate 15s linear infinite;
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+.animate-particle-float {
+  animation: particle-float 4s ease-in-out infinite;
+}
+
+.animate-flicker {
+  animation: flicker 8s ease-in-out infinite;
+}
