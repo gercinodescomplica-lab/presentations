@@ -168,6 +168,25 @@ export default function LeadsMap() {
       // ─── Zoom control custom position ───
       L.control.zoom({ position: 'bottomright' }).addTo(map)
 
+      // ─── Brazil GeoJSON border — teal glow border + subtle dark fill ───
+      fetch('https://raw.githubusercontent.com/codeforamerica/click_that_hood/master/public/data/brazil-states.geojson')
+        .then((r) => r.json())
+        .then((geojson) => {
+          L.geoJSON(geojson, {
+            style: {
+              fillColor: '#081828',
+              fillOpacity: 0.35,
+              color: '#09DFAB',
+              weight: 1.5,
+              opacity: 0.7,
+            },
+            interactive: false,
+          }).addTo(map)
+        })
+        .catch(() => {
+          // silently ignore if fetch fails (offline, etc)
+        })
+
       // ─── Heatmap layer via leaflet.heat ───
       import('leaflet.heat').then(() => {
         // @ts-ignore
