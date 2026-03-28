@@ -27,7 +27,7 @@ export default function PrintButton({ slides, isPresenting }) {
         whileTap={{ scale: 0.96 }}
         className="fixed top-6 z-50 flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-medium transition-all"
         style={{
-          right: '6.5rem',          /* sits left of the language switcher at right-6 */
+          right: '9rem',            /* sits left of the language switcher at right-6 */
           background: 'rgba(11,15,20,0.85)',
           border: '1px solid rgba(255,255,255,0.08)',
           backdropFilter: 'blur(16px)',

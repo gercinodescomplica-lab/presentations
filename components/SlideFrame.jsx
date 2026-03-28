@@ -2,7 +2,7 @@
 export default function SlideFrame({ children, isPresenting }) {
   return (
     <div
-      className="relative w-full h-full bg-[#05070A] grid-bg overflow-hidden"
+      className="relative w-full h-full bg-[#05070A] grid-bg overflow-hidden pb-16"
       style={isPresenting ? { position: 'fixed', inset: 0, background: '#05070A' } : undefined}
     >
       {/* Radial ambient glow — top left */}
