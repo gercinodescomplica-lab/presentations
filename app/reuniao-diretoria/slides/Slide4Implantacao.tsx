@@ -42,7 +42,7 @@ export default function Slide4Implantacao() {
         
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="relative z-10">
            <h3 className="text-xl font-medium text-[#8BA0B4] flex items-center gap-3">
-             <Layers className="text-[#09DFAB] w-6 h-6" /> Status das Secretarias - ⚠️⚠️⚠️Warning!!! -  warning perguntar para o Gustavo quais projetos e qual o resultado -
+             <Layers className="text-[#09DFAB] w-6 h-6" /> Onde já estamos trabalhando o fator de complexidade
            </h3>
            <div className="w-full h-px bg-[#1E3A52] mt-6 mb-8" />
         </motion.div>
