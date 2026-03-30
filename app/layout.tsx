@@ -3,7 +3,7 @@ import './globals.css'
 import I18nProvider from '@/components/I18nProvider'
 
 export const metadata: Metadata = {
-  title: 'TwinSP — Gêmeo Digital de São Paulo',
+  title: 'Presentations',
   description: 'Multi-deck presentation system for PRODAM / DRM initiatives',
 }
 

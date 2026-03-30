@@ -196,7 +196,7 @@ export default function LeadsMap() {
           radius: 60,
           blur: 50,
           maxZoom: 10,
-          gradient: { 0: '#035E65', 0.4: '#04767F', 0.7: '#09DFAB', 1: '#09DFAB' },
+          gradient: { 0: '#A5F3FC', 0.4: '#FFB800', 0.7: '#FF4D00', 1: '#FF4D00' },
           max: 10,
         })
         heat.addTo(map)
