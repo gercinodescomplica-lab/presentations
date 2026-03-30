@@ -28,7 +28,7 @@ export default function Slide2() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
-            className="text-base font-bold text-white"
+            className="text-lg font-bold text-white"
           >
             Dashboard Comercial
           </motion.h2>
@@ -41,7 +41,7 @@ export default function Slide2() {
           initial={{ opacity: 0, x: 10 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2 }}
-          className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium border border-[#1E3A52] text-[#8BA0B4] hover:text-[#09DFAB] hover:border-[#09DFAB]/40 transition-all"
+          className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium border border-[#1E3A52] text-[#8BA0B4] hover:text-[#09DFAB] hover:border-[#09DFAB]/40 transition-all"
         >
           <ExternalLink className="w-3.5 h-3.5" />
           Abrir em nova aba

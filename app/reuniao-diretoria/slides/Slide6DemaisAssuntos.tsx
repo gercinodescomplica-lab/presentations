@@ -20,7 +20,7 @@ export default function Slide6DemaisAssuntos() {
 
         <div className="relative z-10 flex flex-col gap-7">
           <motion.div initial={{ opacity: 0, x: -16 }} animate={{ opacity: 1, x: 0 }}>
-            <span className="text-[#09DFAB] flex items-center font-mono text-xs uppercase tracking-widest gap-2">
+            <span className="text-[#09DFAB] flex items-center font-mono text-base uppercase tracking-widest gap-2">
               <span className="w-2 h-2 rounded-full bg-[#09DFAB] animate-pulse inline-block" />
               SLIDE 06
             </span>
@@ -31,7 +31,7 @@ export default function Slide6DemaisAssuntos() {
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15 }}
-              className="text-2xl font-bold leading-snug mb-3"
+              className="text-5xl font-bold leading-snug mb-3"
               style={{ textShadow: '0 0 24px rgba(9,223,171,0.18)' }}
             >
               Iniciativas <br />
@@ -41,7 +41,7 @@ export default function Slide6DemaisAssuntos() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.25 }}
-              className="text-[#4A6580] text-xs font-mono uppercase tracking-widest"
+              className="text-[#4A6580] text-lg font-mono uppercase tracking-widest"
             >
               Demais Assuntos
             </motion.p>
@@ -55,7 +55,7 @@ export default function Slide6DemaisAssuntos() {
           transition={{ delay: 1 }}
           className="relative z-10 border-l-2 border-[#09DFAB]/40 pl-4 "
         >
-          <p className="text-[#8BA0B4] text-xs leading-relaxed italic">
+          <p className="text-[#8BA0B4] text-lg leading-relaxed italic">
             "Inteligência aplicada para acelerar decisão, escala e eficiência comercial."
           </p>
         </motion.blockquote>
@@ -79,9 +79,9 @@ export default function Slide6DemaisAssuntos() {
                 <UserCog className="w-5 h-5 text-[#09DFAB]" />
               </div>
               <div>
-                <p className="font-mono text-[9px] uppercase tracking-widest text-[#4A6580]">Bloco 01 · Estrutura Comercial</p>
-                <h3 className="text-[#09DFAB] font-bold text-sm leading-tight">Engenheiro de Vendas</h3>
-                <p className="text-[#4A6580] text-[10px]">Sales Engineer</p>
+                <p className="font-mono text-[11px] uppercase tracking-widest text-[#4A6580]">Bloco 01 · Estrutura Comercial</p>
+                <h3 className="text-[#09DFAB] font-bold text-2xl leading-tight">Engenheiro de Vendas</h3>
+                <p className="text-[#4A6580] text-sm">Sales Engineer</p>
               </div>
             </div>
             <div className="h-px w-full bg-[#1E3A52]" />
@@ -91,7 +91,7 @@ export default function Slide6DemaisAssuntos() {
                 'Apoio na construção de propostas e entendimento técnico',
                 'Aumento da assertividade comercial',
               ].map((b, i) => (
-                <li key={i} className="flex items-start gap-2 text-[#8BA0B4] text-xs leading-snug">
+                <li key={i} className="flex items-start gap-2 text-[#8BA0B4] text-base leading-relaxed mt-1">
                   <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#09DFAB] flex-shrink-0"
                     style={{ boxShadow: '0 0 4px #09DFAB' }} />
                   {b}
@@ -111,8 +111,8 @@ export default function Slide6DemaisAssuntos() {
                 <Bot className="w-5 h-5 text-[#04767F]" />
               </div>
               <div>
-                <p className="font-mono text-[9px] uppercase tracking-widest text-[#4A6580]">Bloco 02 · IA na DRM</p>
-                <h3 className="font-bold text-sm leading-tight" style={{ color: '#06B8B8' }}>Agente Comercial</h3>
+                <p className="font-mono text-[11px] uppercase tracking-widest text-[#4A6580]">Bloco 02 · IA na DRM</p>
+                <h3 className="font-bold text-2xl leading-tight" style={{ color: '#06B8B8' }}>Agente Comercial</h3>
               </div>
             </div>
             <div className="h-px w-full bg-[#04767F]/20" />
@@ -123,7 +123,7 @@ export default function Slide6DemaisAssuntos() {
                 'Consultas em linguagem natural',
                 'Análise de propostas, clientes e métricas',
               ].map((b, i) => (
-                <li key={i} className="flex items-start gap-2 text-[#8BA0B4] text-xs leading-snug">
+                <li key={i} className="flex items-start gap-2 text-[#8BA0B4] text-base leading-relaxed mt-1">
                   <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0"
                     style={{ background: '#04767F', boxShadow: '0 0 4px #04767F' }} />
                   {b}
@@ -147,8 +147,8 @@ export default function Slide6DemaisAssuntos() {
                 <BookOpen className="w-5 h-5 text-[#035E65]" style={{ color: '#09DFAB', opacity: 0.8 }} />
               </div>
               <div>
-                <p className="font-mono text-[9px] uppercase tracking-widest text-[#4A6580]">Bloco 02 · IA na DRM</p>
-                <h3 className="font-bold text-sm leading-tight" style={{ color: '#09DFAB', opacity: 0.85 }}>
+                <p className="font-mono text-[11px] uppercase tracking-widest text-[#4A6580]">Bloco 02 · IA na DRM</p>
+                <h3 className="font-bold text-2xl leading-tight" style={{ color: '#09DFAB', opacity: 0.85 }}>
                   Agente do Conhecimento
                 </h3>
               </div>
@@ -160,7 +160,7 @@ export default function Slide6DemaisAssuntos() {
                 'Redução do tempo de onboarding',
                 'Acesso rápido a políticas, normas e documentação',
               ].map((b, i) => (
-                <li key={i} className="flex items-start gap-2 text-[#8BA0B4] text-xs leading-snug">
+                <li key={i} className="flex items-start gap-2 text-[#8BA0B4] text-base leading-relaxed mt-1">
                   <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0"
                     style={{ background: '#09DFAB', opacity: 0.6, boxShadow: '0 0 4px #09DFAB' }} />
                   {b}
@@ -180,8 +180,8 @@ export default function Slide6DemaisAssuntos() {
                 <Lightbulb className="w-5 h-5 text-[#09DFAB]" style={{ opacity: 0.75 }} />
               </div>
               <div>
-                <p className="font-mono text-[9px] uppercase tracking-widest text-[#4A6580]">Bloco Complementar</p>
-                <h3 className="text-white font-bold text-sm leading-tight">Uso Prático de IA</h3>
+                <p className="font-mono text-[11px] uppercase tracking-widest text-[#4A6580]">Bloco Complementar</p>
+                <h3 className="text-white font-bold text-2xl leading-tight">Uso Prático de IA</h3>
               </div>
             </div>
             <div className="h-px w-full bg-[#1E3A52]" />
@@ -191,7 +191,7 @@ export default function Slide6DemaisAssuntos() {
                 'Formulários, apresentações e automações',
                 'Ganho de produtividade e padronização',
               ].map((b, i) => (
-                <li key={i} className="flex items-start gap-2 text-[#8BA0B4] text-xs leading-snug">
+                <li key={i} className="flex items-start gap-2 text-[#8BA0B4] text-base leading-relaxed mt-1">
                   <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#8BA0B4]/50 flex-shrink-0" />
                   {b}
                 </li>

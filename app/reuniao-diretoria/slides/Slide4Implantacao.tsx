@@ -19,17 +19,17 @@ export default function Slide4Implantacao() {
 
         <div className="relative z-10 flex flex-col gap-8">
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
-            <span className="text-[#09DFAB] flex items-center font-mono text-xs uppercase tracking-widest gap-2">
+            <span className="text-[#09DFAB] flex items-center font-mono text-sm uppercase tracking-widest gap-2">
               <div className="w-2 h-2 rounded-full bg-[#09DFAB] animate-pulse" />
               SLIDE 04
             </span>
           </motion.div>
 
           <div>
-            <motion.h2 className="text-4xl font-bold leading-tight mb-4" style={{ textShadow: '0 0 30px rgba(9,223,171,0.2)' }}>
+            <motion.h2 className="text-5xl font-bold leading-tight mb-4" style={{ textShadow: '0 0 30px rgba(9,223,171,0.2)' }}>
               Implantação do <br/> <span className="text-[#09DFAB]">Fator de Complexidade</span>
             </motion.h2>
-            <motion.p className="text-[#8BA0B4] text-lg leading-relaxed">
+            <motion.p className="text-[#8BA0B4] text-xl leading-relaxed">
               Adoção do modelo de cobrança por fator de complexidade: secretarias que adotaram o modelo.
             </motion.p>
           </div>
@@ -41,7 +41,7 @@ export default function Slide4Implantacao() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#04767F] blur-[200px] opacity-10 pointer-events-none rounded-full" />
         
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="relative z-10">
-           <h3 className="text-xl font-medium text-[#8BA0B4] flex items-center gap-3">
+           <h3 className="text-2xl font-medium text-[#8BA0B4] flex items-center gap-3">
              <Layers className="text-[#09DFAB] w-6 h-6" /> Onde já estamos trabalhando o fator de complexidade
            </h3>
            <div className="w-full h-px bg-[#1E3A52] mt-6 mb-8" />
@@ -61,13 +61,13 @@ export default function Slide4Implantacao() {
                       <step.icon style={{ color: step.color }} className="w-8 h-8" />
                    </div>
                    <div>
-                     <h4 className="text-2xl font-bold">{step.title}</h4>
-                     <p className="text-lg mt-1" style={{ color: step.color === '#09DFAB' ? '#09DFAB' : '#8BA0B4' }}>
+                     <h4 className="text-3xl font-bold">{step.title}</h4>
+                     <p className="text-xl mt-1" style={{ color: step.color === '#09DFAB' ? '#09DFAB' : '#8BA0B4' }}>
                        {step.status}
                      </p>
                    </div>
                 </div>
-                <div className="hidden lg:flex items-center gap-3 text-sm text-[#4A6580]">
+                <div className="hidden lg:flex items-center gap-3 text-base text-[#4A6580]">
                    <div className="w-12 h-px bg-[#4A6580]" />
                    Evolução
                 </div>

@@ -20,17 +20,17 @@ export default function Slide4() {
 
         <div className="relative z-10 flex flex-col gap-8">
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
-            <span className="text-[#09DFAB] flex items-center font-mono text-xs uppercase tracking-widest gap-2">
+            <span className="text-[#09DFAB] flex items-center font-mono text-sm uppercase tracking-widest gap-2">
               <div className="w-2 h-2 rounded-full bg-[#09DFAB] animate-pulse" />
               SLIDE 04
             </span>
           </motion.div>
 
           <div>
-            <motion.h2 className="text-4xl font-bold leading-tight mb-4" style={{ textShadow: '0 0 30px rgba(9,223,171,0.2)' }}>
+            <motion.h2 className="text-5xl font-bold leading-tight mb-4" style={{ textShadow: '0 0 30px rgba(9,223,171,0.2)' }}>
               Entraves <br /> <span className="text-[#09DFAB]">(PRODAM STORE)</span>
             </motion.h2>
-            <motion.p className="text-[#8BA0B4] text-lg leading-relaxed">
+            <motion.p className="text-[#8BA0B4] text-xl leading-relaxed">
               Diagnóstico executivo de riscos da operação técnica.
             </motion.p>
           </div>
@@ -54,9 +54,9 @@ export default function Slide4() {
               >
                 <div className="flex items-center gap-3 mb-2">
                   <AlertTriangle className="w-5 h-5 text-[#04767F]" />
-                  <h4 className="text-[#09DFAB] font-bold text-xl uppercase tracking-wider">{issue.label}</h4>
+                  <h4 className="text-[#09DFAB] font-bold text-2xl uppercase tracking-wider">{issue.label}</h4>
                 </div>
-                <p className="text-[#8BA0B4] text-lg max-w-md ml-8 leading-relaxed">
+                <p className="text-[#8BA0B4] text-xl max-w-md ml-8 leading-relaxed">
                   {issue.desc}
                 </p>
               </motion.div>

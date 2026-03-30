@@ -20,7 +20,7 @@ export default function Slide6() {
             className="flex items-center gap-2"
           >
             <span className="w-2 h-2 rounded-full bg-[#09DFAB] animate-pulse" />
-            <span className="font-mono text-[10px] uppercase tracking-widest text-[#09DFAB]">
+            <span className="font-mono text-sm uppercase tracking-widest text-[#09DFAB]">
               Slide 07
             </span>
           </motion.div>
@@ -29,7 +29,7 @@ export default function Slide6() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
-            className="text-lg font-bold text-white"
+            className="text-3xl font-bold text-white"
           >
             Mapa de Oportunidades Comerciais
           </motion.h2>
@@ -39,7 +39,7 @@ export default function Slide6() {
           initial={{ opacity: 0, x: 10 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-[#4A6580] font-mono text-xs"
+          className="text-[#4A6580] font-mono text-base"
         >
           BRASIL · {new Date().getFullYear()} · DRM / PRODAM
         </motion.div>

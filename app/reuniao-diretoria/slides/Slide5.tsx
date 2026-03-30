@@ -20,17 +20,17 @@ export default function Slide5() {
 
         <div className="relative z-10 flex flex-col gap-8">
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
-            <span className="text-[#09DFAB] flex items-center font-mono text-xs uppercase tracking-widest gap-2">
+            <span className="text-[#09DFAB] flex items-center font-mono text-sm uppercase tracking-widest gap-2">
               <div className="w-2 h-2 rounded-full bg-[#09DFAB] animate-pulse" />
               SLIDE 05
             </span>
           </motion.div>
 
           <div>
-            <motion.h2 className="text-4xl font-bold leading-tight mb-4" style={{ textShadow: '0 0 30px rgba(9,223,171,0.2)' }}>
+            <motion.h2 className="text-5xl font-bold leading-tight mb-4" style={{ textShadow: '0 0 30px rgba(9,223,171,0.2)' }}>
               Tríade <br/> <span className="text-[#09DFAB]">Digital</span>
             </motion.h2>
-            <motion.p className="text-[#8BA0B4] text-lg leading-relaxed">
+            <motion.p className="text-[#8BA0B4] text-xl leading-relaxed">
               O fluxo inteligente entre o dado bruto até a entrega de valor real na palma da mão do cidadão.
             </motion.p>
           </div>
@@ -56,8 +56,8 @@ export default function Slide5() {
                 >
                    <item.icon className="w-10 h-10 text-white" />
                 </div>
-                <h4 className="text-center font-bold text-xl mb-2">{item.title}</h4>
-                <p className="text-center text-[#8BA0B4] text-sm max-w-[200px] leading-relaxed">
+                <h4 className="text-center font-bold text-2xl mb-2">{item.title}</h4>
+                <p className="text-center text-[#8BA0B4] text-base max-w-[200px] leading-relaxed">
                   {item.desc}
                 </p>
              </motion.div>
@@ -73,7 +73,7 @@ export default function Slide5() {
         >
            <div className="px-6 py-2 bg-[#0C2D35] border border-[#04767F] rounded-full flex items-center gap-3">
              <Combine className="w-5 h-5 text-[#09DFAB]" />
-             <span className="text-sm tracking-wider uppercase font-semibold text-[#09DFAB]">Conexão Unificada</span>
+             <span className="text-base tracking-wider uppercase font-semibold text-[#09DFAB]">Conexão Unificada</span>
            </div>
         </motion.div>
       </div>

@@ -59,7 +59,7 @@ export default function Slide5Parcerias() {
 
         <div className="relative z-10 flex flex-col gap-8">
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
-            <span className="text-[#09DFAB] flex items-center font-mono text-xs uppercase tracking-widest gap-2">
+            <span className="text-[#09DFAB] flex items-center font-mono text-sm uppercase tracking-widest gap-2">
               <span className="w-2 h-2 rounded-full bg-[#09DFAB] animate-pulse inline-block" />
               SLIDE 05
             </span>
@@ -70,7 +70,7 @@ export default function Slide5Parcerias() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15 }}
-              className="text-3xl font-bold leading-tight mb-4"
+              className="text-4xl font-bold leading-tight mb-4"
               style={{ textShadow: '0 0 30px rgba(9,223,171,0.2)' }}
             >
               PRODAM STORE {' '}
@@ -80,7 +80,7 @@ export default function Slide5Parcerias() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25 }}
-              className="text-[#8BA0B4] text-base leading-relaxed"
+              className="text-[#8BA0B4] text-lg leading-relaxed"
             >
               Evolução do Modelo de Parcerias Estratégicas
             </motion.p>
@@ -96,7 +96,7 @@ export default function Slide5Parcerias() {
           style={{ background: 'rgba(9,223,171,0.06)' }}
         >
       
-          <p className="text-[#8BA0B4] text-sm leading-snug mt-1">
+          <p className="text-[#8BA0B4] text-base leading-snug mt-1">
             Lançamento de Produtos, Serviços e Soluções
            </p>
         </motion.div>
@@ -169,7 +169,7 @@ export default function Slide5Parcerias() {
                     >
                       {idx === 0 ? '← antes' : idx === 1 ? '→ agora' : '→ visão'}
                     </span>
-                    <span className="font-bold text-base" style={{ color: stage.color }}>
+                    <span className="font-bold text-lg" style={{ color: stage.color }}>
                       {stage.label}
                     </span>
                   </div>
@@ -186,7 +186,7 @@ export default function Slide5Parcerias() {
                         className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0"
                         style={{ background: stage.color, boxShadow: `0 0 4px ${stage.color}` }}
                       />
-                      <span className="text-[#8BA0B4] text-sm leading-snug">{b}</span>
+                      <span className="text-[#8BA0B4] text-base leading-snug">{b}</span>
                     </li>
                   ))}
                 </ul>

@@ -22,7 +22,7 @@ export default function Slide1() {
           <div className="p-2 bg-[#0C2D35] border border-[#035E65] rounded-xl flex items-center justify-center">
             <Hexagon className="w-6 h-6 text-[#09DFAB]" />
           </div>
-          <span className="text-[#8BA0B4] font-semibold tracking-wider uppercase text-sm">
+          <span className="text-[#8BA0B4] font-semibold tracking-wider uppercase text-base">
             DIRETORIA DE RELACIONAMENTO E INTELIGÊNCIA DE MERCADO
           </span>
         </motion.div>
@@ -38,7 +38,7 @@ export default function Slide1() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-5xl font-bold leading-tight mb-6"
+            className="text-6xl font-bold leading-tight mb-6"
             style={{ textShadow: '0 0 30px rgba(9,223,171,0.2)' }}
           >
             Reunião de <br/>
@@ -49,7 +49,7 @@ export default function Slide1() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-[#8BA0B4] text-lg max-w-sm leading-relaxed"
+            className="text-[#8BA0B4] text-xl max-w-sm leading-relaxed"
           >
             Alinhamento estratégico, evolução de indicadores e planejamento das iniciativas corporativas.
           </motion.p>
@@ -59,7 +59,7 @@ export default function Slide1() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
-          className="relative z-10 text-[#4A6580] font-mono text-sm tracking-widest uppercase"
+          className="relative z-10 text-[#4A6580] font-mono text-base tracking-widest uppercase"
         >
           01 de abril de 2026 // VISÃO EXECUTIVA - DRM
         </motion.div>

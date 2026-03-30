@@ -60,9 +60,9 @@ export default function Slide3Triade() {
           transition={{ delay: 0.5 }}
           className="w-[19%] flex-shrink-0 flex flex-col items-end gap-1 pr-4"
         >
-          <span className="text-[#09DFAB] font-bold text-lg text-right">SuperApp</span>
+          <span className="text-[#09DFAB] font-bold text-xl text-right">SuperApp</span>
           <div className="w-8 h-px bg-[#09DFAB]/40 self-end mb-1" />
-          <p className="text-[#8BA0B4] text-md text-right leading-relaxed">
+          <p className="text-[#8BA0B4] text-lg text-right leading-relaxed">
             Mapeamento dos serviços e estruturação da camada de atendimento ao cidadão.
           </p>
         </motion.div>
@@ -150,9 +150,9 @@ export default function Slide3Triade() {
           >
             <div className="flex items-center gap-2 mb-1">
               <div className="w-6 h-px bg-[#09DFAB]/50" />
-              <span className="text-[#09DFAB] font-bold text-lg">Digital Twin</span>
+              <span className="text-[#09DFAB] font-bold text-xl">Digital Twin</span>
             </div>
-            <p className="text-[#8BA0B4] text-md leading-relaxed">
+            <p className="text-[#8BA0B4] text-lg leading-relaxed">
               Reuniões com empresas (Dahua, Dassault) e participação em eventos para entendimento das soluções e definição da abordagem inicial.
             </p>
           </motion.div>
@@ -166,9 +166,9 @@ export default function Slide3Triade() {
           >
             <div className="flex items-center gap-2 mb-1">
               <div className="w-6 h-px bg-[#09DFAB]/50" />
-              <span className="text-[#09DFAB] font-bold text-lg">Data Lake</span>
+              <span className="text-[#09DFAB] font-bold text-xl">Data Lake</span>
             </div>
-            <p className="text-[#8BA0B4] text-md leading-relaxed">
+            <p className="text-[#8BA0B4] text-lg leading-relaxed">
               Articulação com secretarias (Saúde, SPTrans e outras) para implantação de data lakes setoriais.
             </p>
           </motion.div>
