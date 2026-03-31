@@ -178,6 +178,25 @@ export default function Slide4bMainframe() {
           </div>
         </motion.div>
 
+        {/* FLOATING NOTE (BOTTOM RIGHT) */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.9, x: 20 }}
+          animate={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{ delay: 1, duration: 0.5 }}
+          className="absolute bottom-4 right-6 z-20 px-5 py-3 rounded-2xl border border-[#09DFAB]/40 bg-[#0A1120]/90 backdrop-blur-md shadow-[0_0_30px_rgba(9,223,171,0.1)] flex items-center gap-3"
+        >
+          <div className="p-2 rounded-full bg-[#09DFAB]/10 text-[#09DFAB]">
+            <Calculator className="w-5 h-5 font-bold" />
+          </div>
+          <div className="flex flex-col">
+            <span className="text-[10px] font-mono text-[#4A6580] uppercase tracking-widest leading-none mb-1">Cálculo Estimado</span>
+            <p className="text-sm font-bold text-white leading-tight">
+               Exemplo: SEGES tem <span className="text-[#09DFAB]">3 MIPS</span> (R$ 10k cada) <br/>
+               <span className="text-white/70 font-normal">Resultado:</span> <span className="text-[#09DFAB]">R$ 30.000,00 / mês</span>
+            </p>
+          </div>
+        </motion.div>
+
       </div>
     </div>
   )
