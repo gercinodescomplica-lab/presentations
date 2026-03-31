@@ -22,7 +22,7 @@ export default function Slide6DemaisAssuntos() {
           <motion.div initial={{ opacity: 0, x: -16 }} animate={{ opacity: 1, x: 0 }}>
             <span className="text-[#09DFAB] flex items-center font-mono text-base uppercase tracking-widest gap-2">
               <span className="w-2 h-2 rounded-full bg-[#09DFAB] animate-pulse inline-block" />
-              SLIDE 06
+              SLIDE 08
             </span>
           </motion.div>
 

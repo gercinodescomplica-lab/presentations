@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { CheckCircle2 } from 'lucide-react'
+import { CheckCircle2, Mail, Phone, Globe } from 'lucide-react'
 
 export default function Slide7Agradecimento() {
   return (
@@ -49,6 +49,16 @@ export default function Slide7Agradecimento() {
           <div className="px-6 py-2 rounded-full border border-[#1E3A52] bg-[#0A1120]/80 backdrop-blur-sm">
             <span className="text-[#09DFAB] font-mono text-xl tracking-widest font-semibold">DRM</span>
           </div>
+        </motion.div>
+
+        <motion.div 
+           initial={{ opacity: 0, y: 20 }}
+           animate={{ opacity: 1, y: 0 }}
+           transition={{ delay: 0.6, duration: 0.6 }}
+           className="mt-12 flex gap-8 text-[#4A6580] font-mono text-xs uppercase tracking-widest"
+        >
+           <div className="flex items-center gap-2"><Mail className="w-4 h-4 text-[#09DFAB]" /> gercinoneto@prodam.sp.gov.br</div>
+           <div className="flex items-center gap-2"><Globe className="w-4 h-4 text-[#09DFAB]" /> prodam.sp.gov.br</div>
         </motion.div>
       </div>
 

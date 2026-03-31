@@ -1,36 +1,30 @@
-import Slide1               from '@/app/reuniao-diretoria/slides/Slide1'
-import Slide2               from '@/app/reuniao-diretoria/slides/Slide2'
-import Slide6               from '@/app/reuniao-diretoria/slides/Slide6'
-import Slide5Entraves       from '@/app/reuniao-diretoria/slides/Slide5Entraves'
-import Slide3Triade         from '@/app/reuniao-diretoria/slides/Slide3Triade'
-import Slide6DemaisAssuntos from '@/app/reuniao-diretoria/slides/Slide6DemaisAssuntos'
-import Slide4Implantacao    from '@/app/reuniao-diretoria/slides/Slide4Implantacao'
-import Slide4bMainframe     from '@/app/reuniao-diretoria/slides/Slide4bMainframe'
-import Slide7Agradecimento  from '@/app/reuniao-diretoria/slides/Slide7Agradecimento'
+import Capa           from '@/app/reuniao-diretoria/slides/Slide01Capa'
+import Dashboard      from '@/app/reuniao-diretoria/slides/Slide02Dashboard'
+import Mapa           from '@/app/reuniao-diretoria/slides/Slide03Mapa'
+import ProdamStore    from '@/app/reuniao-diretoria/slides/Slide04ProdamStore'
+import Triade         from '@/app/reuniao-diretoria/slides/Slide05Triade'
+import FaturSnapshot  from '@/app/reuniao-diretoria/slides/Slide06Faturamento'
+import FaturMensal    from '@/app/reuniao-diretoria/slides/Slide07FaturamentoMensal'
+import IniciativasIA  from '@/app/reuniao-diretoria/slides/Slide08IniciativasIA'
+import Complexidade   from '@/app/reuniao-diretoria/slides/Slide09Complexidade'
+import Mainframe      from '@/app/reuniao-diretoria/slides/Slide10Mainframe'
+import Agradecimento  from '@/app/reuniao-diretoria/slides/Slide11Agradecimento'
 
 /**
- * Ordem dos slides – Reunião de Diretoria
- *
- * 1. Capa
- * 2. Dashboard Comercial (embed)
- * 3. Mapa de Oportunidades Comerciais
- * 4. PRODAM STORE – Parcerias Estratégicas
- * 5. Tríade Digital
- * 6. Iniciativas Estratégicas DRM
- * 7. Implantação do Fator de Complexidade
- * 8. Modelos de Cobrança Mainframe
- * 9. Agradecimento
+ * Ordem dos slides – Reunião de Diretoria (VERSÃO FINAL 2026 - 11 SLIDES)
  */
 const reuniaoDiretoriaSlides = [
-  Slide1,
-  Slide2,
-  Slide6,
-  Slide5Entraves,
-  Slide3Triade,
-  Slide6DemaisAssuntos,
-  Slide4Implantacao,
-  Slide4bMainframe,
-  Slide7Agradecimento,
+  Capa,           // 01
+  Dashboard,      // 02
+  Mapa,           // 03
+  ProdamStore,    // 04
+  Triade,         // 05
+  FaturSnapshot,  // 06
+  FaturMensal,    // 07 (NOVO)
+  IniciativasIA,  // 08
+  Complexidade,   // 09
+  Mainframe,      // 10
+  Agradecimento,  // 11
 ]
 
 export default reuniaoDiretoriaSlides

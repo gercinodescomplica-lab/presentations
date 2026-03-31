@@ -43,7 +43,7 @@ export default function Slide4Implantacao() {
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
             <span className="text-[#09DFAB] flex items-center font-mono text-sm uppercase tracking-widest gap-2">
               <div className="w-2 h-2 rounded-full bg-[#09DFAB] animate-pulse" />
-              SLIDE 07
+              SLIDE 09
             </span>
           </motion.div>
 
