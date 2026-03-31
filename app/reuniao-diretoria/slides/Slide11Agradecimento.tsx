@@ -57,7 +57,7 @@ export default function Slide7Agradecimento() {
            transition={{ delay: 0.6, duration: 0.6 }}
            className="mt-12 flex gap-8 text-[#4A6580] font-mono text-xs uppercase tracking-widest"
         >
-           <div className="flex items-center gap-2"><Mail className="w-4 h-4 text-[#09DFAB]" /> gercinoneto@prodam.sp.gov.br</div>
+          
            <div className="flex items-center gap-2"><Globe className="w-4 h-4 text-[#09DFAB]" /> prodam.sp.gov.br</div>
         </motion.div>
       </div>
