@@ -21,7 +21,7 @@ export default function Slide6() {
           >
             <span className="w-2 h-2 rounded-full bg-[#09DFAB] animate-pulse" />
             <span className="font-mono text-sm uppercase tracking-widest text-[#09DFAB]">
-              Slide 07
+              Slide 03
             </span>
           </motion.div>
           <div className="w-px h-4 bg-[#1E3A52]" />

@@ -61,7 +61,7 @@ export default function Slide5Parcerias() {
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
             <span className="text-[#09DFAB] flex items-center font-mono text-sm uppercase tracking-widest gap-2">
               <span className="w-2 h-2 rounded-full bg-[#09DFAB] animate-pulse inline-block" />
-              SLIDE 05
+              SLIDE 04
             </span>
           </motion.div>
 

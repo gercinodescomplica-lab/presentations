@@ -37,7 +37,7 @@ export default function Slide3Triade() {
         className="absolute top-5 left-8 flex items-center gap-2 z-20">
         <span className="w-2 h-2 rounded-full bg-[#09DFAB] animate-pulse" />
         <span className="font-mono text-[10px] uppercase tracking-widest text-[#09DFAB]">
-          Slide 03 · Tríade Digital
+          Slide 05 · Tríade Digital
         </span>
       </motion.div>
 

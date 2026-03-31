@@ -16,7 +16,7 @@ export default function Slide4bMainframe() {
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
             <span className="text-[#09DFAB] flex items-center font-mono text-xs uppercase tracking-widest gap-2">
               <span className="w-2 h-2 rounded-full bg-[#09DFAB] animate-pulse inline-block" />
-              SLIDE 04B
+              SLIDE 07
             </span>
           </motion.div>
 
@@ -37,7 +37,7 @@ export default function Slide4bMainframe() {
               transition={{ delay: 0.25 }}
               className="text-[#8BA0B4] text-lg leading-relaxed mt-4"
             >
-              MIPS e BATCH (BETE) são modelos <strong>alternativos</strong>. 
+              MIPS e BATCH são modelos <strong>alternativos</strong>. 
               A escolha correta depende do perfil de consumo do cliente.
             </motion.p>
           </div>
@@ -105,7 +105,7 @@ export default function Slide4bMainframe() {
                   <Zap className="text-[#06B8B8] w-5 h-5" />
                </div>
                <div>
-                 <h3 className="text-2xl font-bold text-[#FFFFFF]">BATCH <span className="text-lg font-normal text-[#8BA0B4]">(BETE)</span></h3>
+                 <h3 className="text-2xl font-bold text-[#FFFFFF]">BATCH <span className="text-lg font-normal text-[#8BA0B4]"></span></h3>
                  <p className="text-[#06B8B8] text-xs uppercase tracking-wider font-mono">Processamento</p>
                </div>
             </div>
