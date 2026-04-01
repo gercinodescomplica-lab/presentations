@@ -80,7 +80,16 @@ export default function Slide11Agradecimento() {
                className="flex flex-col items-center gap-4"
              >
                <div className="w-28 h-28 rounded-full overflow-hidden border-[3px] border-[#09DFAB]/40 shadow-[0_0_30px_rgba(9,223,171,0.15)] relative backdrop-blur-md bg-[#0C2D35]/50 flex items-center justify-center">
-                 <Image src={m.img} alt={m.name} fill className="object-cover" />
+                 <Image 
+                   src={m.img} 
+                   alt={m.name} 
+                   fill 
+                   className="object-cover"
+                   sizes="112px"
+                   placeholder="blur"
+                   priority
+                   quality={80}
+                 />
                </div>
                <span className="text-[#8BA0B4] font-medium tracking-wide text-xl">{m.name}</span>
              </motion.div>
