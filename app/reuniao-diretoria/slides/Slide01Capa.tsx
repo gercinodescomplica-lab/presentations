@@ -61,7 +61,7 @@ export default function Slide1() {
           transition={{ duration: 1, delay: 1 }}
           className="relative z-10 text-[#4A6580] font-mono text-base tracking-widest uppercase"
         >
-          01 de abril de 2026 // VISÃO EXECUTIVA - DRM
+           VISÃO EXECUTIVA - DRM
         </motion.div>
       </div>
 
