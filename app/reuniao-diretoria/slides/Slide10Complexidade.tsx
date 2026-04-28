@@ -112,7 +112,7 @@ export default function Slide4Implantacao() {
                    <TableProperties className="text-[#09DFAB] w-6 h-6" /> 
                    Estrutura SGM – Sistemas de Informação
                  </h3>
-                 <p className="text-[#8BA0B4] mt-1 text-sm">Composição de Horas/Homem (Tomiato/Vera)</p>
+                 <p className="text-[#8BA0B4] mt-1 text-sm">Composição de Horas/Homem (Tomiatto/Vera)</p>
               </div>
 
               <div className="flex-1 relative z-10 flex flex-col bg-[#0A1120] border border-[#1E3A52] rounded-2xl overflow-hidden shadow-2xl">

@@ -88,7 +88,7 @@ export default function Slide4bMainframe() {
               <li className="flex gap-2 items-start"><CheckCircle2 className="w-4 h-4 text-[#09DFAB] flex-shrink-0 mt-1" /> <span>Quem paga MIPS <strong>não paga</strong> processamento.</span></li>
             </ul>
             <div className="mt-1 p-2.5 rounded-lg border border-[#09DFAB]/20 bg-[#09DFAB]/5 text-xs">
-              <span className="text-[#09DFAB] font-bold">Exemplo Real:</span> CEGES (Paga valor fixo mensal)
+              <span className="text-[#09DFAB] font-bold">Exemplo Real:</span> SEGES (Paga valor fixo mensal)
             </div>
           </motion.div>
 
