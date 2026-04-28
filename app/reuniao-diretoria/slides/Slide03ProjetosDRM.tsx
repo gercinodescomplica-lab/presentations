@@ -34,7 +34,7 @@ const projects = [
   {
     id: 'javis',
     Icon: Bot,
-    name: 'Javis',
+    name: 'Jarvis',
     tagline: 'IA Conversacional · WhatsApp',
     description:
       'Robô de IA conectado às APIs da empresa. Entrega dados corporativos em tempo real com experiência conversacional nativa no WhatsApp.',
