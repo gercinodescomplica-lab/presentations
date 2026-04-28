@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
-import { LucideIcon, Layers, Database, Smartphone, LayoutDashboard, ChevronRight, Briefcase } from 'lucide-react'
+import { LucideIcon, Layers, Database, Smartphone, LayoutDashboard, ChevronRight, Briefcase, FileText, Bot } from 'lucide-react'
 
 // You mentioned creating folders for Digital Twin, Data Lake, Smart App, Super App
 const PRESENTATIONS = [
@@ -51,13 +51,40 @@ const PRESENTATIONS = [
     href: '/super-app',
     slideCount: 0,
   },
+  {
+    id: 'spdf',
+    title: 'SPDF (São Paulo PDF)',
+    description: 'Pitch Deck corporativo sobre a solução interna de processamento de PDFs com compliance LGPD.',
+    gradient: 'from-blue-600 via-indigo-500 to-purple-500',
+    icon: FileText,
+    href: '/spdf',
+    slideCount: 12,
+  },
+  {
+    id: 'smart-park',
+    title: 'Smart Park',
+    description: 'Pitch deck de segurança em parques públicos com IoT, IA e modelo de negócio PPP 2.0.',
+    gradient: 'from-emerald-600 via-green-500 to-amber-500',
+    icon: LayoutDashboard,
+    href: '/smart-park',
+    slideCount: 9,
+  },
+  {
+    id: 'jarvis',
+    title: 'Jarvis',
+    description: 'Assistente executivo de IA que vive no WhatsApp — dados em tempo real, lembretes, contratos e documentos em uma mensagem.',
+    gradient: 'from-violet-600 via-purple-500 to-indigo-500',
+    icon: Bot,
+    href: '/jarvis',
+    slideCount: 9,
+  },
 ]
 
 export default function HomePage() {
   const router = useRouter()
 
   return (
-    <div className="min-h-screen bg-[#050505] text-[#FAFAFA] selection:bg-blue-500/30 overflow-hidden relative">
+    <div className="h-screen overflow-y-auto overflow-x-hidden bg-[#050505] text-[#FAFAFA] selection:bg-blue-500/30 relative">
       {/* Background Effects */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] opacity-20 pointer-events-none">
         <div className="absolute inset-0 bg-blue-500 blur-[120px] rounded-full mix-blend-screen" />

@@ -3,16 +3,16 @@ import { TrendingDown, TableProperties, BarChart3 } from 'lucide-react'
 
 export default function Slide6bFaturamento() {
   const data = [
-    { label: 'GRC - 1', previsto: '125.890.123', realizado26: '12.600.790', realizado25: '84.855.155', var: '-90%', resultado: '-113.289', media: '48%', meta: '125.890.123' },
-    { label: 'GRC - 2', previsto: '103.215.116', realizado26: '11.340.635', realizado25: '76.012.596', var: '-89%', resultado: '-91.874', media: '36%', meta: '103.215.116' },
-    { label: 'GRC - 3', previsto: '96.334.903', realizado26: '10.845.032', realizado25: '71.369.857', var: '-89%', resultado: '-85.489', media: '35%', meta: '96.334.903' },
-    { label: 'GRC - 4', previsto: '59.512.074', realizado26: '6.824.210', realizado25: '39.428.826', var: '-89%', resultado: '-52.687', media: '51%', meta: '59.512.073' },
-    { label: 'KAM - 1', previsto: '182.795.395', realizado26: '12.873.766', realizado25: '102.040.866', var: '-93%', resultado: '-169.921', media: '79%', meta: '182.795.395' },
-    { label: 'KAM - 2', previsto: '153.689.749', realizado26: '23.150.840', realizado25: '128.072.174', var: '-85%', resultado: '-130.538', media: '20%', meta: '153.689.749' },
-    { label: 'KAM - 3', previsto: '73.472.771', realizado26: '6.500.760', realizado25: '38.631.305', var: '-91%', resultado: '-66.972', media: '90%', meta: '73.472.771' },
-    { label: 'KAM - 4', previsto: '94.040.696', realizado26: '16.519.532', realizado25: '81.393.123', var: '-82%', resultado: '-77.521', media: '16%', meta: '94.040.696' },
-    { label: 'GRC - CC', previsto: '48.880.270', realizado26: '1.340.765', realizado25: '7.047.666', var: '-97%', resultado: '-47.539', media: '594%', meta: '48.880.270' },
-    { label: 'Tríade Digital', previsto: '130.000.000', realizado26: '-', realizado25: '-', var: '-100%', resultado: '-130.000', media: '0%', meta: '130.000.001' },
+    { label: 'GRC - 1', previsto: '125.890.123', realizado26: '18.931.057', realizado25: '84.855.155', var: '-85%', resultado: '-106.959.066', media: '48%', meta: '125.890.123,00' },
+    { label: 'GRC - 2', previsto: '103.215.116', realizado26: '16.222.717', realizado25: '76.012.596', var: '-84%', resultado: '-86.992.399', media: '36%', meta: '103.215.116,00' },
+    { label: 'GRC - 3', previsto: '96.334.903', realizado26: '15.374.415', realizado25: '71.369.857', var: '-84%', resultado: '-80.960.488', media: '35%', meta: '96.334.903,00' },
+    { label: 'GRC - 4', previsto: '59.512.074', realizado26: '9.716.803', realizado25: '39.428.826', var: '-84%', resultado: '-49.795.271', media: '51%', meta: '59.512.073,54' },
+    { label: 'KAM - 1', previsto: '182.795.395', realizado26: '19.500.453', realizado25: '102.040.866', var: '-89%', resultado: '-163.294.942', media: '79%', meta: '182.795.395,00' },
+    { label: 'KAM - 2', previsto: '153.689.749', realizado26: '34.731.947', realizado25: '128.072.174', var: '-77%', resultado: '-118.957.802', media: '20%', meta: '153.689.749,13' },
+    { label: 'KAM - 3', previsto: '73.472.771', realizado26: '10.456.123', realizado25: '38.631.305', var: '-86%', resultado: '-63.016.648', media: '90%', meta: '73.472.771,00' },
+    { label: 'KAM - 4', previsto: '94.040.696', realizado26: '24.636.662', realizado25: '81.393.123', var: '-74%', resultado: '-69.404.034', media: '16%', meta: '94.040.696,00' },
+    { label: 'GRC - CC', previsto: '48.880.270', realizado26: '2.009.677', realizado25: '7.047.666', var: '-96%', resultado: '-46.870.593', media: '594%', meta: '48.880.270,00' },
+    { label: 'Tríade Digital', previsto: '130.000.001', realizado26: '-', realizado25: '-', var: '-100%', resultado: '-130.000.001', media: '0%', meta: '130.000.001,33' },
   ]
 
   return (
@@ -37,7 +37,7 @@ export default function Slide6bFaturamento() {
                         <div className="flex items-center gap-2 text-red-400 font-bold text-sm uppercase tracking-wider">
                             <TrendingDown className="w-4 h-4" /> Desvio 2026
                         </div>
-                        <div className="text-5xl font-bold text-white tracking-tighter">-84%</div>
+                        <div className="text-5xl font-bold text-white tracking-tighter">-76%</div>
                     </div>
                     <div className="p-5 rounded-2xl border border-[#1E3A52] bg-[#1E3A52]/30 flex flex-col gap-2">
                         <div className="flex items-center gap-2 text-[#09DFAB] font-bold text-sm uppercase tracking-wider">
@@ -62,7 +62,7 @@ export default function Slide6bFaturamento() {
             <div className="flex gap-10 bg-[#0A1120] border border-[#1E3A52] px-8 py-3 rounded-2xl shadow-xl">
                  <div className="text-right border-r border-[#1E3A52] pr-10">
                     <p className="text-[10px] uppercase text-[#4A6580] font-mono tracking-widest mb-1 italic">Realizado Total 2026</p>
-                    <p className="text-2xl font-bold text-[#09DFAB] font-mono">101.9 Mi</p>
+                    <p className="text-2xl font-bold text-[#09DFAB] font-mono">151.6 Mi</p>
                  </div>
                  <div className="text-right">
                     <p className="text-[10px] uppercase text-[#4A6580] font-mono tracking-widest mb-1 italic">Meta Global 2026</p>
@@ -105,10 +105,10 @@ export default function Slide6bFaturamento() {
           <div className="bg-[#09DFAB]/10 border-t border-[#09DFAB]/30 px-8 py-6 grid grid-cols-12 gap-4 items-center">
             <div className="col-span-3 font-black text-[#09DFAB] text-lg uppercase tracking-[0.2em]">TOTAIS</div>
             <div className="col-span-2 text-right font-mono text-xl font-bold text-white/90">1.067.831.098</div>
-            <div className="col-span-2 text-right font-mono text-2xl font-bold text-[#09DFAB] drop-shadow-[0_0_15px_rgba(9,223,171,0.3)]">101.996.330</div>
+            <div className="col-span-2 text-right font-mono text-2xl font-bold text-[#09DFAB] drop-shadow-[0_0_15px_rgba(9,223,171,0.3)]">151.579.853</div>
             <div className="col-span-3 text-right font-mono text-xl font-bold text-[#4A6580]">628.851.568</div>
             <div className="col-span-2 text-right font-black text-red-500 text-3xl tracking-tighter">
-                -84%
+                -76%
             </div>
           </div>
         </motion.div>

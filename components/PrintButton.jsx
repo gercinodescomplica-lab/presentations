@@ -13,39 +13,39 @@ function PrintIcon() {
   )
 }
 
-export default function PrintButton({ slides, isPresenting }) {
+export default function PrintButton({ slides, isPresenting, theme = 'dark' }) {
   const [mounted, setMounted] = useState(false)
   useEffect(() => setMounted(true), [])
+  const isLight = theme === 'light'
 
   if (isPresenting) return null
 
   return (
     <>
-      {/* Trigger button — positioned to the left of the language switcher */}
+      {/* Trigger button — inline in the bottom bar */}
       <motion.button
         onClick={() => window.print()}
-        initial={{ opacity: 0, y: -6 }}
+        initial={{ opacity: 0, y: 6 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.9, duration: 0.4 }}
         whileHover={{ scale: 1.04 }}
         whileTap={{ scale: 0.96 }}
-        className="fixed top-6 z-50 flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-medium transition-all"
+        className="flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-medium transition-all shadow-sm"
         style={{
-          right: '10rem',           /* sits left of the language switcher at right-6 */
-          background: 'rgba(11,15,20,0.85)',
-          border: '1px solid rgba(255,255,255,0.08)',
+          background: isLight ? 'white' : 'rgba(11,15,20,0.85)',
+          border: `1px solid ${isLight ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.08)'}`,
           backdropFilter: 'blur(16px)',
-          color: 'rgba(255,255,255,0.6)',
+          color: isLight ? '#475569' : 'rgba(255,255,255,0.6)',
         }}
         onMouseEnter={e => {
-          e.currentTarget.style.color = '#2F80FF'
-          e.currentTarget.style.borderColor = 'rgba(47,128,255,0.4)'
-          e.currentTarget.style.background = 'rgba(47,128,255,0.1)'
+          e.currentTarget.style.color = isLight ? '#2563eb' : '#2F80FF'
+          e.currentTarget.style.borderColor = isLight ? '#2563eb' : 'rgba(47,128,255,0.4)'
+          e.currentTarget.style.background = isLight ? '#eff6ff' : 'rgba(47,128,255,0.1)'
         }}
         onMouseLeave={e => {
-          e.currentTarget.style.color = 'rgba(255,255,255,0.6)'
-          e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'
-          e.currentTarget.style.background = 'rgba(11,15,20,0.85)'
+          e.currentTarget.style.color = isLight ? '#475569' : 'rgba(255,255,255,0.6)'
+          e.currentTarget.style.borderColor = isLight ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.08)'
+          e.currentTarget.style.background = isLight ? 'white' : 'rgba(11,15,20,0.85)'
         }}
       >
         <PrintIcon />

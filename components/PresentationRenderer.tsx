@@ -22,9 +22,10 @@ import PrintButton from '@/components/PrintButton'
 
 interface PresentationRendererProps {
   slides: React.ComponentType[]
+  theme?: 'dark' | 'light'
 }
 
-export default function PresentationRenderer({ slides }: PresentationRendererProps) {
+export default function PresentationRenderer({ slides, theme = 'dark' }: PresentationRendererProps) {
   const presentation = usePresentation(slides.length)
   const {
     currentSlide,
@@ -42,7 +43,7 @@ export default function PresentationRenderer({ slides }: PresentationRendererPro
   const CurrentSlide = slides[currentSlide]
 
   return (
-    <SlideFrame isPresenting={isPresenting}>
+    <SlideFrame isPresenting={isPresenting} theme={theme}>
       <SlideContainer currentSlide={currentSlide} direction={direction}>
         <CurrentSlide />
       </SlideContainer>
@@ -57,11 +58,16 @@ export default function PresentationRenderer({ slides }: PresentationRendererPro
         prevSlide={prevSlide}
         goToSlide={goToSlide}
         togglePresentation={togglePresentation}
+        theme={theme}
+        rightControls={
+          <>
+            <PrintButton slides={slides} isPresenting={isPresenting} theme={theme} />
+            <LanguageSwitcher isPresenting={isPresenting} theme={theme} />
+          </>
+        }
       />
 
       <KeyboardNavigation isPresenting={isPresenting} />
-      <LanguageSwitcher isPresenting={isPresenting} />
-      <PrintButton slides={slides} isPresenting={isPresenting} />
     </SlideFrame>
   )
 }

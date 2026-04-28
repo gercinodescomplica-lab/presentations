@@ -1,9 +1,12 @@
 // SlideFrame provides the global background layer — grid, noise, ambient lighting
-export default function SlideFrame({ children, isPresenting }) {
+export default function SlideFrame({ children, isPresenting, theme = 'dark' }) {
+  const isLight = theme === 'light'
+  const bgColor = isLight ? '#f8fafc' : '#05070A' // slate-50 or dark bg
+
   return (
     <div
-      className="relative w-full h-full bg-[#05070A] grid-bg overflow-hidden pb-16"
-      style={isPresenting ? { position: 'fixed', inset: 0, background: '#05070A' } : undefined}
+      className={`relative w-full h-full ${isLight ? 'bg-slate-50 text-slate-900' : 'bg-[#05070A] grid-bg'} overflow-hidden pb-16`}
+      style={isPresenting ? { position: 'fixed', inset: 0, background: bgColor } : undefined}
     >
       {/* Radial ambient glow — top left */}
       <div

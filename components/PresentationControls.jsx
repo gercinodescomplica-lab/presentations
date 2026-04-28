@@ -11,8 +11,12 @@ export default function PresentationControls({
   prevSlide,
   goToSlide,
   togglePresentation,
+  theme = 'dark',
+  rightControls = null,
 }) {
   const { t } = useTranslation()
+  const isLight = theme === 'light'
+
   return (
     <>
       {/* Bottom Navigation Bar */}
@@ -32,8 +36,8 @@ export default function PresentationControls({
           whileTap={{ scale: 0.95 }}
           className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium border transition-all duration-300 ${
             isFirst
-              ? 'border-white/5 text-white/20 cursor-not-allowed'
-              : 'border-white/10 text-white/60 hover:text-white hover:border-[#2F80FF]/50 hover:bg-[#2F80FF]/10'
+              ? (isLight ? 'border-slate-200 text-slate-300 cursor-not-allowed hidden' : 'border-white/5 text-white/20 cursor-not-allowed')
+              : (isLight ? 'border-slate-200 text-slate-500 hover:text-slate-900 hover:border-blue-500/50 hover:bg-blue-50' : 'border-white/10 text-white/60 hover:text-white hover:border-[#2F80FF]/50 hover:bg-[#2F80FF]/10')
           }`}
         >
           <ChevronLeft />
@@ -47,12 +51,12 @@ export default function PresentationControls({
               <button
                 key={i}
                 onClick={() => goToSlide(i)}
-                className="relative group"
+                className="relative group p-1"
               >
                 <motion.div
                   animate={{
                     width: i === currentSlide ? 24 : 6,
-                    backgroundColor: i === currentSlide ? '#2F80FF' : 'rgba(255,255,255,0.2)',
+                    backgroundColor: i === currentSlide ? '#2563eb' : (isLight ? 'rgba(0,0,0,0.15)' : 'rgba(255,255,255,0.2)'),
                   }}
                   transition={{ duration: 0.3 }}
                   className="h-1.5 rounded-full"
@@ -60,19 +64,25 @@ export default function PresentationControls({
               </button>
             ))}
           </div>
-          <span className="text-white/25 text-xs font-mono tracking-widest">
+          <span className={`text-xs font-mono tracking-widest ${isLight ? 'text-slate-400' : 'text-white/25'}`}>
             {String(currentSlide + 1).padStart(2, '0')} / {String(totalSlides).padStart(2, '0')}
           </span>
         </div>
 
-        {/* Right: Next / Start Presentation */}
+        {/* Right: extra controls + Next / Start Presentation */}
         <div className="flex items-center gap-3">
+          {!isPresenting && rightControls}
+
           {!isPresenting ? (
             <motion.button
               onClick={togglePresentation}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium border border-[#2F80FF]/30 text-[#2F80FF] hover:bg-[#2F80FF]/10 transition-all duration-300 mr-2"
+              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium border transition-all duration-300 mr-2 ${
+                isLight 
+                  ? 'border-blue-200 text-blue-600 hover:bg-blue-50 bg-white' 
+                  : 'border-[#2F80FF]/30 text-[#2F80FF] hover:bg-[#2F80FF]/10'
+              }`}
             >
               <FullscreenIcon />
               <span>{t('nav.present')}</span>
@@ -86,8 +96,8 @@ export default function PresentationControls({
             whileTap={{ scale: 0.95 }}
             className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium border transition-all duration-300 ${
               isLast
-                ? 'border-white/5 text-white/20 cursor-not-allowed'
-                : 'border-[#2F80FF]/30 bg-[#2F80FF]/10 text-[#2F80FF] hover:bg-[#2F80FF]/20 hover:border-[#2F80FF]/60'
+                ? (isLight ? 'border-slate-200 text-slate-300 cursor-not-allowed hidden' : 'border-white/5 text-white/20 cursor-not-allowed')
+                : (isLight ? 'border-blue-200 bg-blue-50 text-blue-600 hover:bg-blue-100 hover:border-blue-300' : 'border-[#2F80FF]/30 bg-[#2F80FF]/10 text-[#2F80FF] hover:bg-[#2F80FF]/20 hover:border-[#2F80FF]/60')
             }`}
           >
             <span>{t('nav.next')}</span>
