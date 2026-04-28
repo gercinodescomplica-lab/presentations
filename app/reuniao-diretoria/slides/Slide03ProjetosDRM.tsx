@@ -212,14 +212,14 @@ export default function Slide03ProjetosDRM() {
             transition={{ delay: 0.5 }}
             className='flex flex-col gap-2 mt-2'
           >
-            <div className='flex items-center gap-2 text-sm font-mono text-[#8BA0B4]'>
+            {/* <div className='flex items-center gap-2 text-sm font-mono text-[#8BA0B4]'>
               <div className='w-2 h-2 rounded-full bg-[#09DFAB]' />
               Com apresentação disponível
             </div>
             <div className='flex items-center gap-2 text-sm font-mono text-[#8BA0B4]'>
               <div className='w-2 h-2 rounded-full bg-[#F59E0B]' />
               Em desenvolvimento
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </div>
