@@ -12,6 +12,7 @@
  * component only wires the slides prop into the existing system.
  */
 
+import React from 'react'
 import { usePresentation } from '@/hooks/usePresentation'
 import SlideContainer from '@/components/SlideContainer'
 import SlideFrame from '@/components/SlideFrame'

@@ -1,6 +1,21 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 
+/**
+ * @param {{
+ *   currentSlide: number,
+ *   totalSlides: number,
+ *   isPresenting: boolean,
+ *   isFirst: boolean,
+ *   isLast: boolean,
+ *   nextSlide: () => void,
+ *   prevSlide: () => void,
+ *   goToSlide: (i: number) => void,
+ *   togglePresentation: () => void,
+ *   theme?: 'dark' | 'light',
+ *   rightControls?: import('react').ReactNode,
+ * }} props
+ */
 export default function PresentationControls({
   currentSlide,
   totalSlides,
