@@ -24,9 +24,10 @@ import PrintButton from '@/components/PrintButton'
 interface PresentationRendererProps {
   slides: React.ComponentType[]
   theme?: 'dark' | 'light'
+  showLanguageSwitcher?: boolean
 }
 
-export default function PresentationRenderer({ slides, theme = 'dark' }: PresentationRendererProps) {
+export default function PresentationRenderer({ slides, theme = 'dark', showLanguageSwitcher = true }: PresentationRendererProps) {
   const presentation = usePresentation(slides.length)
   const {
     currentSlide,
@@ -63,7 +64,7 @@ export default function PresentationRenderer({ slides, theme = 'dark' }: Present
         rightControls={
           <>
             <PrintButton slides={slides} isPresenting={isPresenting} theme={theme} />
-            <LanguageSwitcher isPresenting={isPresenting} theme={theme} />
+            {showLanguageSwitcher && <LanguageSwitcher isPresenting={isPresenting} theme={theme} />}
           </>
         }
       />
