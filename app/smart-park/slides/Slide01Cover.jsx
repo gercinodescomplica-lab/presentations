@@ -1,10 +1,24 @@
-import { motion } from 'framer-motion'
+'use client'
+import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import {
   EcoGardenCard,
-  EcoGardenImagePlaceholder,
 } from '@/templates/EcoGarden'
+import cover01 from '@/assets/smart-park/cover-01.jpg'
+import cover02 from '@/assets/smart-park/cover-02.jpg'
+
+const images = [cover01, cover02]
 
 export default function Slide01Cover() {
+  const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex(i => (i + 1) % images.length)
+    }, 3000)
+    return () => clearInterval(timer)
+  }, [])
+
   return (
     <EcoGardenCard className="flex-row">
       {/* Left Panel */}
@@ -74,17 +88,27 @@ export default function Slide01Cover() {
       </div>
 
       {/* Right Panel */}
-      <div className="flex-1 flex flex-col items-center justify-center gap-8 px-14 z-10">
+      <div className="flex-1 flex flex-col items-center justify-center gap-6 px-4 z-10">
         <motion.div
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
-          className="relative"
+          className="relative w-full"
         >
-          <div className="absolute w-[320px] h-[320px] rounded-full" style={{
-            background: 'radial-gradient(circle, rgba(134,239,172,0.15) 0%, transparent 70%)',
-          }} />
-          <EcoGardenImagePlaceholder label="Park Aerial View" className="relative z-10 w-72 h-72 rounded-3xl" />
+          <div className="relative z-10 w-full h-[460px] rounded-2xl overflow-hidden shadow-xl">
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={index}
+                src={images[index].src}
+                alt="Smart Park"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.8, ease: 'easeInOut' }}
+                className="w-full h-full object-cover"
+              />
+            </AnimatePresence>
+          </div>
         </motion.div>
 
         <motion.div

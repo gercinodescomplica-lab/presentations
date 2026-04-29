@@ -12,9 +12,10 @@ export default function SmartParkPage() {
   const { i18n } = useTranslation()
   
   const lang = i18n.language || i18n.resolvedLanguage || 'pt'
-  
-  let currentSlides = slidesEn
-  if (lang.startsWith('pt')) currentSlides = slidesPt
+
+  // PT-BR is default
+  let currentSlides = slidesPt
+  if (lang.startsWith('en')) currentSlides = slidesEn
   else if (lang.startsWith('es')) currentSlides = slidesEs
   else if (lang.startsWith('zh')) currentSlides = slidesZh
   else if (lang.startsWith('ru')) currentSlides = slidesRu

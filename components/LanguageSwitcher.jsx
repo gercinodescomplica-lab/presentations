@@ -11,12 +11,12 @@ const LANGUAGES = [
   { code: 'ru', label: 'Русский',   flag: '🇷🇺', short: 'RU' },
 ]
 
-// Language codes that appear as URL suffixes (EN = root, no suffix)
-const LANG_SUFFIXES = ['pt', 'es', 'zh', 'ru']
+// PT-BR is the default (root URL, no suffix). All other languages have a suffix.
+const ALL_LANG_CODES = ['pt', 'en', 'es', 'zh', 'ru']
 
 function getBaseRoute(pathname) {
   const parts = pathname.split('/').filter(Boolean)
-  if (parts.length > 0 && LANG_SUFFIXES.includes(parts[parts.length - 1])) {
+  if (parts.length > 0 && ALL_LANG_CODES.includes(parts[parts.length - 1])) {
     return '/' + parts.slice(0, -1).join('/')
   }
   return pathname
@@ -31,11 +31,12 @@ export default function LanguageSwitcher({ isPresenting, theme = 'dark' }) {
 
   const isLight = theme === 'light'
 
-  // Sync i18n with current URL lang suffix on mount
+  // Sync i18n with current URL lang suffix on mount.
+  // PT-BR is the default — no suffix means 'pt'.
   useEffect(() => {
     const parts = pathname.split('/').filter(Boolean)
     const last = parts[parts.length - 1]
-    const urlLang = LANG_SUFFIXES.includes(last) ? last : 'en'
+    const urlLang = ALL_LANG_CODES.includes(last) ? last : 'pt'
     if (i18n.language !== urlLang) i18n.changeLanguage(urlLang)
   }, [pathname]) // eslint-disable-line
 
@@ -55,9 +56,9 @@ export default function LanguageSwitcher({ isPresenting, theme = 'dark' }) {
   const select = (code) => {
     i18n.changeLanguage(code)
     setOpen(false)
-    // Navigate to the language-specific route
+    // PT-BR = root (no suffix); all others get a suffix
     const base = getBaseRoute(pathname)
-    const target = code === 'en' ? base : `${base}/${code}`
+    const target = code === 'pt' ? base : `${base}/${code}`
     router.push(target)
   }
 

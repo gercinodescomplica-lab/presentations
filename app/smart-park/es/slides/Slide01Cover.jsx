@@ -1,4 +1,10 @@
-import { motion } from 'framer-motion'
+'use client'
+import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import cover01 from '@/assets/smart-park/cover-01.jpg'
+import cover02 from '@/assets/smart-park/cover-02.jpg'
+
+const images = [cover01, cover02]
 
 function PulsingDot({ color = '#4ADE80' }) {
   return (
@@ -10,6 +16,15 @@ function PulsingDot({ color = '#4ADE80' }) {
 }
 
 export default function Slide01Cover() {
+  const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex(i => (i + 1) % images.length)
+    }, 3000)
+    return () => clearInterval(timer)
+  }, [])
+
   return (
     <div className="w-full h-full flex items-center justify-center p-6 lg:p-10">
       <motion.div
@@ -156,26 +171,16 @@ export default function Slide01Cover() {
           </motion.div>
         </div>
 
-        <div className="relative z-10 flex-1 flex flex-col items-center justify-center gap-8 px-14">
+        <div className="relative z-10 flex-1 flex flex-col items-center justify-center gap-6 px-4">
           <motion.div
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
-            className="relative flex items-center justify-center"
+            className="relative w-full"
           >
-            <div className="absolute w-[320px] h-[320px] rounded-full" style={{
-              background: 'radial-gradient(circle, rgba(74,222,128,0.08) 0%, transparent 70%)',
-            }} />
-            <div className="absolute w-[240px] h-[240px] rounded-full" style={{
-              background: 'radial-gradient(circle, rgba(245,158,11,0.06) 0%, transparent 70%)',
-            }} />
-
             <div
-              className="relative z-10 w-40 h-40 rounded-3xl flex items-center justify-center"
+              className="relative z-10 w-full h-[460px] rounded-2xl overflow-hidden"
               style={{
-                background: 'rgba(255,255,255,0.03)',
-                backdropFilter: 'blur(24px) saturate(2)',
-                WebkitBackdropFilter: 'blur(24px) saturate(2)',
                 border: '1px solid rgba(74,222,128,0.18)',
                 boxShadow: [
                   'inset 0 1px 0 rgba(255,255,255,0.08)',
@@ -184,14 +189,18 @@ export default function Slide01Cover() {
                 ].join(', '),
               }}
             >
-              <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-                <circle cx="40" cy="40" r="28" stroke="#4ADE80" strokeWidth="1.5" opacity="0.4" />
-                <circle cx="40" cy="40" r="18" stroke="#F59E0B" strokeWidth="1.5" opacity="0.6" />
-                <path d="M40 12 L40 68 M12 40 L68 40" stroke="#4ADE80" strokeWidth="1" opacity="0.25" />
-                <rect x="34" y="34" width="12" height="12" rx="2" fill="rgba(74,222,128,0.15)" stroke="#4ADE80" strokeWidth="1.5" />
-                <circle cx="40" cy="40" r="3" fill="#F59E0B" />
-                <path d="M28 52 L34 46 L40 52 L46 44 L52 50" stroke="#F59E0B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={index}
+                  src={images[index].src}
+                  alt="Smart Park"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.8, ease: 'easeInOut' }}
+                  className="w-full h-full object-cover"
+                />
+              </AnimatePresence>
             </div>
           </motion.div>
 

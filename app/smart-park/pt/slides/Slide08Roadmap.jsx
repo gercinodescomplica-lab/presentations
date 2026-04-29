@@ -2,17 +2,17 @@ import { motion } from 'framer-motion'
 
 export default function Slide08Roadmap() {
   const phases = [
-    { number: '01', label: 'Diagnóstico', desc: 'Auditoria de infraestrutura e levantamento de conectividade local. Meses 1–2.', color: '#4ADE80' },
-    { number: '02', label: 'Deploy de Core', desc: 'Instalação de postes inteligentes e backbone de fibra. Meses 3–5.', color: '#F59E0B' },
-    { number: '03', label: 'Inteligência', desc: 'Ativação de sensores, IA de segurança e plataforma de dados. Meses 6–7.', color: '#4ADE80' },
-    { number: '04', label: 'Go-Live', desc: 'Eventos de ativação e entrega do dashboard para a comunidade. Mês 8+.', color: '#F59E0B' },
+    { number: '01', label: 'Diagnóstico', desc: 'Auditoria de infraestrutura e levantamento de conectividade local. Mês 1.', color: '#4ADE80' },
+    { number: '02', label: 'Deploy de Core', desc: 'Instalação de postes inteligentes e backbone de fibra. Mês 2.', color: '#F59E0B' },
+    { number: '03', label: 'Inteligência', desc: 'Ativação de sensores, IA de segurança e plataforma de dados. Mês 3.', color: '#4ADE80' },
+    { number: '04', label: 'Go-Live', desc: 'Eventos de ativação e entrega do dashboard para a comunidade. Mês 4.', color: '#F59E0B' },
   ]
 
   return (
     <div className="w-full h-full flex items-center justify-center p-6 lg:p-10">
       <motion.div
         initial={{ opacity: 0, scale: 0.97 }}
-        animate={{ opacity: 1, scale: 1 }}
+        animate={{ opacity: 1, scale: 1 }}Não
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         className="relative w-full h-full max-w-[1400px] max-h-[820px] rounded-3xl overflow-hidden"
         style={{
