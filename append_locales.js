@@ -7,8 +7,8 @@ const dictionaries = {
         badge1: 'PRODAM · PP993', badge2: 'Internal Product', city: 'São Paulo', title: 'SPDF',
         tagline1: 'Secure PDF & document processing for the public sector.',
         tagline2: '100% internal. Fully LGPD compliant.',
-        typeLabel: 'Type', typeValue: 'Pitch Deck · 2025', unitLabel: 'Unit', unitValue: 'NMS-2 / SISTEMAS',
-        versionLabel: 'Version', versionValue: 'v1.0 · Jan 2025'
+        typeLabel: 'Type', typeValue: 'Pitch Deck · 2025', unitLabel: 'Unit', unitValue: 'GDS-2 / DDS & GRI / DRM',
+        versionLabel: 'Version', versionValue: 'v1.0 · Jan 2026'
       },
       slide02: {
         label: 'THE PROBLEM', tag: 'VULNERABILITY', title: 'The Data Leak Blindspot',
@@ -45,8 +45,8 @@ const dictionaries = {
         badge1: 'PRODAM · PP993', badge2: 'Produto Interno', city: 'São Paulo', title: 'SPDF',
         tagline1: 'Processamento seguro de PDFs e documentos para o setor público.',
         tagline2: '100% interno. Totalmente em conformidade com a LGPD.',
-        typeLabel: 'Tipo', typeValue: 'Pitch Deck · 2025', unitLabel: 'Unidade', unitValue: 'NMS-2 / SISTEMAS',
-        versionLabel: 'Versão', versionValue: 'v1.0 · Jan 2025'
+        typeLabel: 'Tipo', typeValue: 'Pitch Deck · 2025', unitLabel: 'Unidade', unitValue: 'GDS-2 / DDS & GRI / DRM',
+        versionLabel: 'Versão', versionValue: 'v1.0 · Jan 2026'
       },
       slide02: {
         label: 'O PROBLEMA', tag: 'VULNERABILIDADE', title: 'O Ponto Cego do Vazamento de Dados',
@@ -83,7 +83,7 @@ const dictionaries = {
         badge1: 'PRODAM · PP993', badge2: 'Producto Interno', city: 'São Paulo', title: 'SPDF',
         tagline1: 'Procesamiento seguro de PDF y documentos para el sector público.',
         tagline2: '100% interno. Totalmente compatible con la LGPD.',
-        typeLabel: 'Tipo', typeValue: 'Pitch Deck · 2025', unitLabel: 'Unidad', unitValue: 'NMS-2 / SISTEMAS',
+        typeLabel: 'Tipo', typeValue: 'Pitch Deck · 2025', unitLabel: 'Unidad', unitValue: 'GDS-2 / DDS & GRI / DRM',
         versionLabel: 'Versión', versionValue: 'v1.0 · Ene 2025'
       },
       slide02: {

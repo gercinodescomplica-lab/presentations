@@ -77,7 +77,7 @@ export default function Slide01Cover() {
             <div className="w-px h-8 bg-slate-200" />
             <div>
               <div className="text-slate-400 font-bold text-[10px] font-mono tracking-widest uppercase">Unidad</div>
-              <div className="text-slate-500 font-semibold text-xs font-mono mt-0.5">NMS-2 / SISTEMAS</div>
+              <div className="text-slate-500 font-semibold text-xs font-mono mt-0.5">GDS-2 / DDS & GRI / DRM</div>
             </div>
             <div className="w-px h-8 bg-slate-200" />
             <div>
@@ -97,7 +97,7 @@ export default function Slide01Cover() {
           >
             {/* Soft background shape */}
             <div className="absolute w-[450px] h-[450px] rounded-full bg-blue-50/50" />
-            
+
             {/* Center icon */}
             <div className="relative z-10 w-36 h-36 rounded-2xl flex items-center justify-center bg-white shadow-xl"
               style={{
