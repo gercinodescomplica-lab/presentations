@@ -2,9 +2,8 @@
 
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
-import { LucideIcon, Layers, Database, Smartphone, LayoutDashboard, ChevronRight, Briefcase, FileText, Bot } from 'lucide-react'
+import { LucideIcon, Layers, Database, Smartphone, LayoutDashboard, ChevronRight, Briefcase, FileText, Bot, Lightbulb } from 'lucide-react'
 
-// You mentioned creating folders for Digital Twin, Data Lake, Smart App, Super App
 const PRESENTATIONS = [
   {
     id: 'reuniao-diretoria',
@@ -77,6 +76,15 @@ const PRESENTATIONS = [
     icon: Bot,
     href: '/jarvis',
     slideCount: 9,
+  },
+  {
+    id: 'sp-innovation-week',
+    title: 'SP Innovation Week',
+    description: 'Transformação digital e integração de serviços públicos — digitalização, interoperabilidade e novos modelos de gestão pública.',
+    gradient: 'from-teal-500 via-cyan-400 to-emerald-400',
+    icon: Lightbulb,
+    href: '/sp-innovation-week',
+    slideCount: 15,
   },
 ]
 
