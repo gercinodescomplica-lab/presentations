@@ -1,17 +1,17 @@
 import { motion } from 'framer-motion'
 
 const nodes = [
-  { label: 'Startups',     x: 420, y:  90, r: 44, color: '#09DFAB' },
-  { label: 'Big Techs',   x: 570, y: 240, r: 48, color: '#04A8B0' },
-  { label: 'Cloud',       x: 510, y: 410, r: 42, color: '#04767F' },
-  { label: 'IA',          x: 330, y: 490, r: 40, color: '#09DFAB' },
-  { label: 'Analytics',   x: 150, y: 430, r: 42, color: '#04A8B0' },
-  { label: 'Automação',   x:  80, y: 255, r: 44, color: '#04767F' },
-  { label: 'Integradores',x: 150, y:  95, r: 46, color: '#09DFAB' },
+  { label: 'Startups',     x: 420, y: 130, r: 44, color: '#09DFAB' },
+  { label: 'Big Techs',   x: 575, y: 285, r: 48, color: '#04A8B0' },
+  { label: 'Cloud',       x: 510, y: 455, r: 42, color: '#04767F' },
+  { label: 'IA',          x: 325, y: 530, r: 40, color: '#09DFAB' },
+  { label: 'Analytics',   x: 145, y: 460, r: 42, color: '#04A8B0' },
+  { label: 'Automação',   x:  75, y: 290, r: 44, color: '#04767F' },
+  { label: 'Integradores',x: 150, y: 135, r: 46, color: '#09DFAB' },
 ]
 
 export default function Slide10Ecossistema() {
-  const cx = 325, cy = 290
+  const cx = 325, cy = 335
 
   return (
     <div className="w-full h-full flex bg-[#0F172A] text-white overflow-hidden">
@@ -63,8 +63,9 @@ export default function Slide10Ecossistema() {
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-          viewBox="0 0 660 590"
-          className="relative z-10 w-full max-w-[640px]"
+          viewBox="0 0 660 660"
+          className="relative z-10 w-full h-full"
+          style={{ maxHeight: '92%', maxWidth: '92%' }}
           xmlns="http://www.w3.org/2000/svg"
         >
           <defs>
@@ -87,20 +88,20 @@ export default function Slide10Ecossistema() {
           {/* Node circles */}
           {nodes.map((n, i) => (
             <g key={n.label}>
-              <circle cx={n.x} cy={n.y} r={n.r} fill={`${n.color}12`} stroke={`${n.color}45`} strokeWidth="1.5" />
-              <circle cx={n.x} cy={n.y} r={8} fill={n.color} filter="url(#eco-f)" />
-              <text x={n.x} y={n.y + n.r + 18} textAnchor="middle" fill="#8BA0B4" fontSize="13" fontFamily="system-ui,sans-serif" fontWeight="600">
+              <circle cx={n.x} cy={n.y} r={n.r} fill={`${n.color}20`} stroke={`${n.color}70`} strokeWidth="2" />
+              <circle cx={n.x} cy={n.y} r={12} fill={n.color} filter="url(#eco-f)" />
+              <text x={n.x} y={n.y + n.r + 22} textAnchor="middle" fill="#E8F0FA" fontSize="18" fontFamily="system-ui,sans-serif" fontWeight="700">
                 {n.label}
               </text>
             </g>
           ))}
 
           {/* Central hub */}
-          <circle cx={cx} cy={cy} r={90} fill="url(#eco-glow)" />
-          <circle cx={cx} cy={cy} r={68} fill="rgba(9,223,171,0.07)" stroke="rgba(9,223,171,0.4)" strokeWidth="1.5" />
-          <circle cx={cx} cy={cy} r={38} fill="rgba(9,223,171,0.12)" stroke="rgba(9,223,171,0.55)" strokeWidth="1" />
-          <text x={cx} y={cy - 8} textAnchor="middle" fill="#09DFAB" fontSize="13" fontFamily="system-ui,sans-serif" fontWeight="800" letterSpacing="1">PRODAM</text>
-          <text x={cx} y={cy + 10} textAnchor="middle" fill="rgba(9,223,171,0.6)" fontSize="11" fontFamily="system-ui,sans-serif">STORE</text>
+          <circle cx={cx} cy={cy} r={110} fill="url(#eco-glow)" />
+          <circle cx={cx} cy={cy} r={84} fill="rgba(9,223,171,0.1)" stroke="rgba(9,223,171,0.55)" strokeWidth="2.5" />
+          <circle cx={cx} cy={cy} r={62} fill="rgba(9,223,171,0.18)" stroke="rgba(9,223,171,0.75)" strokeWidth="2" />
+          <text x={cx} y={cy - 7} textAnchor="middle" fill="#09DFAB" fontSize="18" fontFamily="system-ui,sans-serif" fontWeight="900" letterSpacing="1">PRODAM</text>
+          <text x={cx} y={cy + 15} textAnchor="middle" fill="rgba(9,223,171,0.95)" fontSize="14" fontFamily="system-ui,sans-serif" fontWeight="800" letterSpacing="3">STORE</text>
         </motion.svg>
       </div>
     </div>
