@@ -1,22 +1,25 @@
 import { motion } from 'framer-motion'
 
-const sectors = [
-  { label: 'Saúde', angle: 0, color: '#09DFAB' },
-  { label: 'Mobilidade', angle: 60, color: '#04A8B0' },
-  { label: 'Educação', angle: 120, color: '#04767F' },
-  { label: 'Assistência Social', angle: 180, color: '#09DFAB' },
-  { label: 'Tributação', angle: 240, color: '#04A8B0' },
-  { label: 'Habitação', angle: 300, color: '#04767F' },
-]
+const cx = 350, cy = 350
+const ORBIT_R = 200
+const NODE_R = 34
+const LABEL_R = ORBIT_R + NODE_R + 36
 
-function polarToCartesian(cx: number, cy: number, r: number, angleDeg: number) {
+function polar(r: number, angleDeg: number) {
   const rad = ((angleDeg - 90) * Math.PI) / 180
   return { x: cx + r * Math.cos(rad), y: cy + r * Math.sin(rad) }
 }
 
-export default function Slide06Interoperabilidade() {
-  const cx = 350, cy = 310, r = 215
+const sectors = [
+  { label: 'Saúde',            angle:   0, color: '#09DFAB' },
+  { label: 'Mobilidade',       angle:  60, color: '#04A8B0' },
+  { label: 'Educação',         angle: 120, color: '#04767F' },
+  { label: 'Assistência Social', angle: 180, color: '#09DFAB' },
+  { label: 'Tributação',       angle: 240, color: '#04A8B0' },
+  { label: 'Habitação',        angle: 300, color: '#04767F' },
+]
 
+export default function Slide06Interoperabilidade() {
   return (
     <div className="w-full h-full flex bg-[#0F172A] text-white overflow-hidden">
 
@@ -67,23 +70,23 @@ export default function Slide06Interoperabilidade() {
         </motion.div>
       </div>
 
-      {/* PAINEL DIREITO — diagrama de hub */}
+      {/* PAINEL DIREITO — diagrama orbital simétrico */}
       <div className="flex-1 h-full relative flex items-center justify-center overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#04767F] blur-[200px] opacity-[0.08] pointer-events-none rounded-full" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#04767F] blur-[200px] opacity-[0.08] pointer-events-none rounded-full" />
         <div className="absolute inset-0 opacity-[0.025] pointer-events-none" style={{ backgroundImage: 'linear-gradient(#1E3A52 1px,transparent 1px),linear-gradient(90deg,#1E3A52 1px,transparent 1px)', backgroundSize: '40px 40px' }} />
 
         <motion.svg
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-          viewBox="0 0 700 620"
+          viewBox="0 0 700 700"
           className="relative z-10 w-full h-full"
           style={{ maxHeight: '92%', maxWidth: '92%' }}
           xmlns="http://www.w3.org/2000/svg"
         >
           <defs>
             <radialGradient id="hub-glow" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stopColor="#09DFAB" stopOpacity="0.2" />
+              <stop offset="0%" stopColor="#09DFAB" stopOpacity="0.22" />
               <stop offset="100%" stopColor="#09DFAB" stopOpacity="0" />
             </radialGradient>
             <filter id="glow-f">
@@ -92,28 +95,31 @@ export default function Slide06Interoperabilidade() {
             </filter>
           </defs>
 
+          {/* Orbit ring */}
+          <circle cx={cx} cy={cy} r={ORBIT_R} fill="none" stroke="rgba(9,223,171,0.18)" strokeWidth="1.5" />
+
           {/* Spoke lines */}
           {sectors.map((s) => {
-            const pos = polarToCartesian(cx, cy, r, s.angle)
+            const pos = polar(ORBIT_R, s.angle)
             return (
               <line key={s.label} x1={cx} y1={cy} x2={pos.x} y2={pos.y}
                 stroke="rgba(9,223,171,0.3)" strokeWidth="1.5" strokeDasharray="5 4" />
             )
           })}
 
-          {/* Orbit ring */}
-          <circle cx={cx} cy={cy} r={r} fill="none" stroke="rgba(9,223,171,0.18)" strokeWidth="1.5" />
-
           {/* Sector nodes */}
-          {sectors.map((s, i) => {
-            const pos = polarToCartesian(cx, cy, r, s.angle)
-            const labelPos = polarToCartesian(cx, cy, r + 52, s.angle)
+          {sectors.map((s) => {
+            const pos = polar(ORBIT_R, s.angle)
+            const lPos = polar(LABEL_R, s.angle)
             return (
               <g key={s.label}>
-                <circle cx={pos.x} cy={pos.y} r={34} fill={`${s.color}20`} stroke={`${s.color}65`} strokeWidth="2" />
+                <circle cx={pos.x} cy={pos.y} r={NODE_R} fill={`${s.color}18`} stroke={`${s.color}65`} strokeWidth="2" />
                 <circle cx={pos.x} cy={pos.y} r={11} fill={s.color} filter="url(#glow-f)" />
-                <text x={labelPos.x} y={labelPos.y} textAnchor="middle" dominantBaseline="middle"
-                  fill="#E8F0FA" fontSize="18" fontFamily="system-ui,sans-serif" fontWeight="700">
+                <text
+                  x={lPos.x} y={lPos.y}
+                  textAnchor="middle" dominantBaseline="middle"
+                  fill="#E8F0FA" fontSize="18" fontFamily="system-ui,sans-serif" fontWeight="700"
+                >
                   {s.label}
                 </text>
               </g>
@@ -121,10 +127,11 @@ export default function Slide06Interoperabilidade() {
           })}
 
           {/* Hub central glow */}
-          <circle cx={cx} cy={cy} r={110} fill="url(#hub-glow)" />
-          <circle cx={cx} cy={cy} r={82} fill="rgba(9,223,171,0.1)" stroke="rgba(9,223,171,0.55)" strokeWidth="2.5" />
-          <text x={cx} y={cy - 8} textAnchor="middle" fill="#09DFAB" fontSize="22" fontFamily="system-ui,sans-serif" fontWeight="900" letterSpacing="2">PLATAFORMA</text>
-          <text x={cx} y={cy + 18} textAnchor="middle" fill="rgba(9,223,171,0.85)" fontSize="15" fontFamily="system-ui,sans-serif" fontWeight="600" letterSpacing="3">INTEGRADA</text>
+          <circle cx={cx} cy={cy} r={108} fill="url(#hub-glow)" />
+          <circle cx={cx} cy={cy} r={82} fill="rgba(9,223,171,0.1)" stroke="rgba(9,223,171,0.5)" strokeWidth="2" />
+          <circle cx={cx} cy={cy} r={58} fill="rgba(9,223,171,0.16)" stroke="rgba(9,223,171,0.7)" strokeWidth="2" />
+          <text x={cx} y={cy - 8} textAnchor="middle" fill="#09DFAB" fontSize="20" fontFamily="system-ui,sans-serif" fontWeight="900" letterSpacing="2">PLATAFORMA</text>
+          <text x={cx} y={cy + 15} textAnchor="middle" fill="rgba(9,223,171,0.85)" fontSize="13" fontFamily="system-ui,sans-serif" fontWeight="600" letterSpacing="3">INTEGRADA</text>
         </motion.svg>
       </div>
     </div>
