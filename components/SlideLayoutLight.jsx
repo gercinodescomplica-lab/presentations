@@ -30,10 +30,10 @@ export function SlideCardLight({ slideNum, label, children }) {
 
 export function GradientTitleLight({ children, size = 'lg', className = '' }) {
   const sizes = {
-    sm: 'clamp(1.5rem, 2.5vw, 2rem)',
-    md: 'clamp(1.75rem, 3vw, 2.5rem)',
-    lg: 'clamp(2rem, 3.5vw, 3rem)',
-    xl: 'clamp(2.5rem, 5vw, 4rem)',
+    sm: 'clamp(1.75rem, 3vw, 2.25rem)',
+    md: 'clamp(2rem, 3.5vw, 2.75rem)',
+    lg: 'clamp(2.25rem, 4vw, 3.5rem)',
+    xl: 'clamp(3rem, 5.5vw, 4.5rem)',
   }
   return (
     <h2
@@ -58,14 +58,14 @@ export function SubtitleBarLight({ children }) {
         className="h-[3px] w-8 rounded-full flex-shrink-0"
         style={{ background: 'linear-gradient(90deg, #2563eb, #eab308)' }} // Blue to Yellow gradient
       />
-      <span className="font-heading font-medium text-base tracking-wide text-slate-500">{children}</span>
+      <span className="font-heading font-medium text-lg tracking-wide text-slate-500">{children}</span>
     </div>
   )
 }
 
 export function TagLabelLight({ children, color = '#2563eb' }) {
   return (
-    <span className="text-xs font-mono font-semibold tracking-[0.2em] uppercase" style={{ color }}>
+    <span className="text-sm font-mono font-semibold tracking-[0.2em] uppercase" style={{ color }}>
       {children}
     </span>
   )
@@ -90,10 +90,10 @@ export function ContentBlockLight({ label, desc, color = '#2563eb', index = 0, b
         style={{ background: color }}
       />
       <div className="flex flex-col gap-1.5">
-        <span className="text-[11px] font-mono font-bold tracking-widest uppercase" style={{ color }}>
+        <span className="text-xs font-mono font-bold tracking-widest uppercase" style={{ color }}>
           {label}
         </span>
-        <p className="text-slate-500 text-sm leading-relaxed">{desc}</p>
+        <p className="text-slate-500 text-base leading-relaxed">{desc}</p>
       </div>
     </motion.div>
   )
@@ -133,16 +133,16 @@ export function PhaseCardLight({ number, label, desc, color = '#2563eb', index =
     >
       <div className="flex items-center gap-3">
         <span
-          className="font-heading font-bold text-3xl leading-none"
+          className="font-heading font-bold text-4xl leading-none"
           style={{ color }}
         >
           {number}
         </span>
-        <span className="text-[11px] font-bold font-mono tracking-widest uppercase" style={{ color }}>
+        <span className="text-xs font-bold font-mono tracking-widest uppercase" style={{ color }}>
           {label}
         </span>
       </div>
-      <p className="text-slate-500 text-sm leading-relaxed">{desc}</p>
+      <p className="text-slate-500 text-base leading-relaxed">{desc}</p>
     </motion.div>
   )
 }

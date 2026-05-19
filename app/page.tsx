@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
-import { LucideIcon, Layers, Database, Smartphone, LayoutDashboard, ChevronRight, Briefcase, FileText, Bot, Lightbulb } from 'lucide-react'
+import { LucideIcon, Layers, Database, Smartphone, LayoutDashboard, ChevronRight, Briefcase, FileText, Bot, Lightbulb, Vote } from 'lucide-react'
 
 const PRESENTATIONS = [
   {
@@ -85,6 +85,15 @@ const PRESENTATIONS = [
     icon: Lightbulb,
     href: '/sp-innovation-week',
     slideCount: 15,
+  },
+  {
+    id: 'eleicoes-prodam',
+    title: 'Eleições PRODAM',
+    description: 'Pitch de vendas do produto eleitoral — solução completa de gestão eleitoral para órgãos públicos municipais.',
+    gradient: 'from-blue-700 via-blue-500 to-emerald-400',
+    icon: Vote,
+    href: '/eleicoes-prodam',
+    slideCount: 7,
   },
 ]
 
