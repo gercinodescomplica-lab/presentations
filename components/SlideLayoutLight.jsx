@@ -15,9 +15,9 @@ export function SlideCardLight({ slideNum, label, children }) {
 
         {/* Slide number label — top-left */}
         <div className="absolute top-6 left-8 flex items-center gap-2 z-20">
-          <span className="text-slate-400 text-xs font-mono tracking-widest">{slideNum}</span>
-          <span className="text-slate-300 text-xs font-mono">·</span>
-          <span className="text-slate-400 text-xs font-mono tracking-widest">{label}</span>
+          <span className="text-slate-500 text-xs font-mono tracking-widest">{slideNum}</span>
+          <span className="text-slate-400 text-xs font-mono">·</span>
+          <span className="text-slate-500 text-xs font-mono tracking-widest">{label}</span>
         </div>
         {/* Content */}
         <div className="relative z-10 w-full h-full">{children}</div>
@@ -29,11 +29,14 @@ export function SlideCardLight({ slideNum, label, children }) {
 // ─── Typography Atoms ──────────────────────────────────────────────────────────
 
 export function GradientTitleLight({ children, size = 'lg', className = '' }) {
+  // Fixed rem sizes — canvas is always 1400px wide, transform:scale() handles
+  // visual resizing. vw-based clamps would respond to the real viewport width,
+  // not the canvas, causing text to wrap unpredictably at different screen sizes.
   const sizes = {
-    sm: 'clamp(1.75rem, 3vw, 2.25rem)',
-    md: 'clamp(2rem, 3.5vw, 2.75rem)',
-    lg: 'clamp(2.25rem, 4vw, 3.5rem)',
-    xl: 'clamp(3rem, 5.5vw, 4.5rem)',
+    sm: '1.75rem',
+    md: '2.1rem',
+    lg: '2.5rem',
+    xl: '3.25rem',
   }
   return (
     <h2
@@ -58,7 +61,7 @@ export function SubtitleBarLight({ children }) {
         className="h-[3px] w-8 rounded-full flex-shrink-0"
         style={{ background: 'linear-gradient(90deg, #2563eb, #eab308)' }} // Blue to Yellow gradient
       />
-      <span className="font-heading font-medium text-lg tracking-wide text-slate-500">{children}</span>
+      <span className="font-heading font-medium text-lg tracking-wide text-slate-600">{children}</span>
     </div>
   )
 }
@@ -93,7 +96,7 @@ export function ContentBlockLight({ label, desc, color = '#2563eb', index = 0, b
         <span className="text-xs font-mono font-bold tracking-widest uppercase" style={{ color }}>
           {label}
         </span>
-        <p className="text-slate-500 text-base leading-relaxed">{desc}</p>
+        <p className="text-slate-700 text-base leading-relaxed">{desc}</p>
       </div>
     </motion.div>
   )
@@ -103,7 +106,10 @@ export function ContentBlockLight({ label, desc, color = '#2563eb', index = 0, b
 
 export function LeftPanelLight({ children }) {
   return (
-    <div className="relative z-10 w-[42%] flex-shrink-0 border-r border-slate-100 flex flex-col justify-center px-12 lg:px-16 py-20 gap-5 bg-slate-50/50">
+    // pt-14 (56px) ensures content always starts below the absolute slide-number
+    // label at top-6 (~44px). justify-center keeps visual balance for sparse slides.
+    // overflow-hidden prevents content from ever escaping upward past the label.
+    <div className="relative z-10 w-[42%] flex-shrink-0 border-r border-slate-100 flex flex-col justify-center px-12 lg:px-16 pt-14 pb-10 gap-5 bg-slate-50/50 overflow-hidden">
       {children}
     </div>
   )
@@ -111,7 +117,7 @@ export function LeftPanelLight({ children }) {
 
 export function RightPanelLight({ children, className = '' }) {
   return (
-    <div className={`relative z-10 flex-1 flex flex-col justify-center px-10 lg:px-12 py-20 gap-4 overflow-hidden bg-white ${className}`}>
+    <div className={`relative z-10 flex-1 flex flex-col justify-center px-10 lg:px-12 pt-12 pb-10 gap-4 overflow-hidden bg-white ${className}`}>
       {children}
     </div>
   )

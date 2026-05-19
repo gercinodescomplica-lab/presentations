@@ -14,6 +14,7 @@
 
 import React from 'react'
 import { usePresentation } from '@/hooks/usePresentation'
+import ScaledCanvas from '@/components/ScaledCanvas'
 import SlideContainer from '@/components/SlideContainer'
 import SlideFrame from '@/components/SlideFrame'
 import PresentationControls from '@/components/PresentationControls'
@@ -46,9 +47,11 @@ export default function PresentationRenderer({ slides, theme = 'dark', showLangu
 
   return (
     <SlideFrame isPresenting={isPresenting} theme={theme}>
-      <SlideContainer currentSlide={currentSlide} direction={direction}>
-        <CurrentSlide />
-      </SlideContainer>
+      <ScaledCanvas>
+        <SlideContainer currentSlide={currentSlide} direction={direction}>
+          <CurrentSlide />
+        </SlideContainer>
+      </ScaledCanvas>
 
       <PresentationControls
         currentSlide={currentSlide}

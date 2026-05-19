@@ -22,7 +22,7 @@ export default function Slide03Solucion() {
           <TagLabelLight color={GREEN}>La Solución</TagLabelLight>
           <GradientTitleLight>Elecciones como Servicio</GradientTitleLight>
           <SubtitleBarLight>Del voto al escrutinio, sin preocupaciones</SubtitleBarLight>
-          <p className="text-slate-500 text-base leading-relaxed">Plataforma modular que cubre el ciclo electoral completo — desde la inscripción de candidatos hasta la publicación de resultados.</p>
+          <p className="text-slate-700 text-base leading-relaxed">Plataforma modular que cubre el ciclo electoral completo — desde la inscripción de candidatos hasta la publicación de resultados.</p>
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.85 }} className="rounded-xl p-4" style={{ background: `${GREEN}08`, border: `1px solid ${GREEN}25` }}>
             <div className="flex items-start gap-3"><span className="text-lg flex-shrink-0">✅</span><div className="flex flex-col gap-1"><span className="text-xs font-mono font-semibold tracking-wider" style={{ color: GREEN }}>VENTAJA PRINCIPAL</span><p className="text-slate-600 text-base leading-relaxed">Todo parametrizable — sin personalizaciones costosas, sin retrabajo.</p></div></div>
           </motion.div>

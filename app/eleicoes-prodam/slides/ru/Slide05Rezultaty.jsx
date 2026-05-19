@@ -35,7 +35,7 @@ export default function Slide05Rezultaty() {
           <div className="flex gap-3 w-full">
             {stats.map(({ value, label, color }, i) => (
               <motion.div key={label} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 + i * 0.12 }} className="flex-1 flex flex-col items-center gap-2 py-5 px-4 rounded-2xl bg-white" style={{ border: `1px solid ${color}20`, boxShadow: '0 4px 20px -5px rgba(0,0,0,0.06)' }}>
-                <span className="font-heading font-bold leading-none" style={{ fontSize: 'clamp(2rem, 3.5vw, 2.8rem)', color }}>{value}</span>
+                <span className="font-heading font-bold leading-none" style={{ fontSize: '2.2rem', color }}>{value}</span>
                 <span className="text-slate-600 text-xs font-mono tracking-wide text-center">{label}</span>
               </motion.div>
             ))}

@@ -62,7 +62,7 @@ export default function Slide05Credibilidade() {
                 className="flex-1 flex flex-col items-center gap-2 py-5 px-4 rounded-2xl bg-white"
                 style={{ border: `1px solid ${color}20`, boxShadow: '0 4px 20px -5px rgba(0,0,0,0.06)' }}
               >
-                <span className="font-heading font-bold leading-none" style={{ fontSize: 'clamp(2rem, 3.5vw, 2.8rem)', color }}>{value}</span>
+                <span className="font-heading font-bold leading-none" style={{ fontSize: '2.2rem', color }}>{value}</span>
                 <span className="text-slate-600 text-xs font-mono tracking-wide text-center leading-relaxed">{label}</span>
               </motion.div>
             ))}
@@ -77,7 +77,7 @@ export default function Slide05Credibilidade() {
             transition={{ delay: 0.75 }}
             className="flex flex-col gap-3 w-full"
           >
-            <span className="text-[10px] font-mono font-semibold tracking-widest text-slate-400">CLIENTES DE REFERÊNCIA</span>
+            <span className="text-[10px] font-mono font-semibold tracking-widest text-slate-600">CLIENTES DE REFERÊNCIA</span>
             <div className="flex flex-wrap gap-2">
               {clients.map((client, i) => (
                 <motion.div
@@ -92,7 +92,7 @@ export default function Slide05Credibilidade() {
                 </motion.div>
               ))}
             </div>
-            <p className="text-slate-300 text-[10px] font-mono">SMADS inclui Conselho Tutelar</p>
+            <p className="text-slate-500 text-[10px] font-mono">SMADS inclui Conselho Tutelar</p>
           </motion.div>
         </RightPanelLight>
       </div>

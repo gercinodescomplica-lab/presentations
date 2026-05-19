@@ -20,7 +20,7 @@ export default function Slide04Diferenciales() {
           <TagLabelLight color={BLUE}>Diferenciales</TagLabelLight>
           <GradientTitleLight>Más que un sistema:<br />una alianza<br />estratégica</GradientTitleLight>
           <SubtitleBarLight>Tecnología + Acompañamiento especializado</SubtitleBarLight>
-          <p className="text-slate-500 text-base leading-relaxed">PRODAM no solo provee el sistema — está presente en cada etapa del proceso electoral, garantizando que todo funcione en el momento preciso.</p>
+          <p className="text-slate-700 text-base leading-relaxed">PRODAM no solo provee el sistema — está presente en cada etapa del proceso electoral, garantizando que todo funcione en el momento preciso.</p>
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.85 }} className="flex items-center gap-2 px-3.5 py-2 rounded-lg w-fit" style={{ border: `1px solid ${GREEN}30`, background: `${GREEN}08` }}>
             <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: GREEN }} />
             <span className="text-xs font-mono font-semibold tracking-widest" style={{ color: GREEN }}>SLA GARANTIZADO · MISIÓN CRÍTICA</span>
@@ -33,7 +33,7 @@ export default function Slide04Diferenciales() {
               <div className="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center text-xl" style={{ background: `${color}10` }}>{icon}</div>
               <div className="flex flex-col gap-1.5 flex-1">
                 <span className="text-base font-semibold" style={{ color }}>{title}</span>
-                <p className="text-slate-500 text-base leading-relaxed">{desc}</p>
+                <p className="text-slate-700 text-base leading-relaxed">{desc}</p>
                 <div className="flex items-center gap-1.5 mt-0.5"><div className="h-px flex-shrink-0 w-4" style={{ background: `${color}50` }} /><span className="text-xs font-mono tracking-wide" style={{ color: `${color}90` }}>{highlight}</span></div>
               </div>
             </motion.div>

@@ -22,7 +22,7 @@ export default function Slide03Solution() {
           <TagLabelLight color={GREEN}>The Solution</TagLabelLight>
           <GradientTitleLight>Elections as a Service</GradientTitleLight>
           <SubtitleBarLight>From vote to tabulation, worry-free</SubtitleBarLight>
-          <p className="text-slate-500 text-base leading-relaxed">Modular platform covering the complete electoral cycle — from candidate registration to results publication.</p>
+          <p className="text-slate-700 text-base leading-relaxed">Modular platform covering the complete electoral cycle — from candidate registration to results publication.</p>
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.85 }} className="rounded-xl p-4" style={{ background: `${GREEN}08`, border: `1px solid ${GREEN}25` }}>
             <div className="flex items-start gap-3">
               <span className="text-lg flex-shrink-0">✅</span>

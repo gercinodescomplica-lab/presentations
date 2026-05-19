@@ -34,7 +34,7 @@ export default function Slide01Capa() {
               transition={{ duration: 0.8, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
               className="font-heading font-bold leading-none tracking-tight"
               style={{
-                fontSize: 'clamp(2.6rem, 5vw, 4.2rem)',
+                fontSize: '3.5rem',
                 background: `linear-gradient(135deg, #0f172a 0%, ${BLUE} 60%, ${GREEN} 100%)`,
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -54,11 +54,11 @@ export default function Slide01Capa() {
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 1.2 }} className="flex flex-col gap-2">
             <div className="flex items-center gap-3">
               <div className="w-1.5 h-1.5 rounded-full" style={{ background: GOLD }} />
-              <span className="text-slate-400 text-xs font-mono tracking-widest">DRM · NÚCLEO DE PÓS-VENDA E PRODUTOS SaaS</span>
+              <span className="text-slate-600 text-xs font-mono tracking-widest">DRM · NÚCLEO DE PÓS-VENDA E PRODUTOS SaaS</span>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-1.5 h-1.5 rounded-full opacity-0" />
-              <span className="text-slate-300 text-xs font-mono tracking-widest">PRODAM · 2026</span>
+              <span className="text-slate-500 text-xs font-mono tracking-widest">PRODAM · 2026</span>
             </div>
           </motion.div>
         </div>

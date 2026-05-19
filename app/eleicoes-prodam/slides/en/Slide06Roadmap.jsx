@@ -21,7 +21,7 @@ export default function Slide06Roadmap() {
           <TagLabelLight color={PURPLE}>Roadmap</TagLabelLight>
           <GradientTitleLight>Where we're<br />heading in 2026</GradientTitleLight>
           <SubtitleBarLight>Continuous platform innovation</SubtitleBarLight>
-          <p className="text-slate-500 text-base leading-relaxed">The platform evolves with every electoral cycle, incorporating artificial intelligence and new features to extend reach and quality.</p>
+          <p className="text-slate-700 text-base leading-relaxed">The platform evolves with every electoral cycle, incorporating artificial intelligence and new features to extend reach and quality.</p>
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.85 }} className="rounded-xl p-4 flex flex-col gap-3" style={{ background: `${GOLD}08`, border: `1px solid ${GOLD}25` }}>
             <span className="text-[10px] font-mono font-semibold tracking-wider" style={{ color: GOLD }}>2026 FORECAST</span>
             <div className="grid grid-cols-2 gap-3">
@@ -44,7 +44,7 @@ export default function Slide06Roadmap() {
                     <span className="text-base font-semibold" style={{ color }}>{title}</span>
                     <span className="text-xs font-mono font-semibold tracking-widest px-2 py-0.5 rounded-full" style={{ background: `${color}12`, color }}>{status}</span>
                   </div>
-                  <p className="text-slate-500 text-base leading-relaxed">{desc}</p>
+                  <p className="text-slate-700 text-base leading-relaxed">{desc}</p>
                 </div>
               </motion.div>
             ))}

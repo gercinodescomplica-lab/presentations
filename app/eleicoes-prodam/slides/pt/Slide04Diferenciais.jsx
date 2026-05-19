@@ -11,14 +11,14 @@ const diferenciais = [
   {
     Icon: Target,
     title: 'Operação de Missão Crítica',
-    desc: 'Da configuração à apuração final — acompanhamento total. Sua equipe foca no rito eleitoral; nós garantimos a tecnologia.',
+    desc: 'Da configuração à apuração — acompanhamento total. Você cuida do rito; nós, da tecnologia.',
     color: BLUE,
     highlight: 'Suporte end-to-end',
   },
   {
     Icon: ShieldCheck,
     title: 'Autonomia com Segurança',
-    desc: 'Backoffice renovado para o cliente operar de forma independente, com monitoramento Dynatrace em tempo real.',
+    desc: 'Cliente opera de forma independente, com monitoramento Dynatrace 24/7.',
     color: GREEN,
     highlight: 'Dynatrace · Monitoramento 24/7',
   },
@@ -111,10 +111,10 @@ export default function Slide04Diferenciais() {
 
               <div className="flex flex-col gap-2">
                 <span className="text-base font-bold" style={{ color }}>{title}</span>
-                <p className="text-slate-500 text-base leading-relaxed">{desc}</p>
+                <p className="text-slate-700 text-base leading-relaxed">{desc}</p>
                 <div className="flex items-center gap-2 mt-1">
                   <div className="h-px w-5" style={{ background: `${color}40` }} />
-                  <span className="text-xs font-mono tracking-wider" style={{ color: `${color}80` }}>
+                  <span className="text-xs font-mono tracking-wider" style={{ color: `${color}CC` }}>
                     {highlight}
                   </span>
                 </div>

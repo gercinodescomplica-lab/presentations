@@ -20,7 +20,7 @@ export default function Slide02Tiaozhan() {
           <TagLabelLight color={RED}>挑战</TagLabelLight>
           <GradientTitleLight>规则简单，<br />执行关键</GradientTitleLight>
           <SubtitleBarLight>高度曝光 · 零容错</SubtitleBarLight>
-          <p className="text-slate-500 text-base leading-relaxed">选举的执行窗口集中在几个小时内。机构可见度达到顶峰，任何故障都会损害机构的公信力。</p>
+          <p className="text-slate-700 text-base leading-relaxed">高度曝光，极低容错——4个反复出现的漏洞让每次选举面临风险。</p>
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8 }} className="rounded-xl p-4 flex flex-col gap-2" style={{ background: `${RED}06`, border: `1px solid ${RED}20` }}>
             <span className="text-xs font-mono tracking-wide" style={{ color: RED }}>关键执行时间窗</span>
             <div className="flex items-center gap-1.5">
@@ -34,7 +34,7 @@ export default function Slide02Tiaozhan() {
           {challenges.map(({ icon, title, desc, color }, i) => (
             <motion.div key={title} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.4 + i * 0.1, ease: [0.22, 1, 0.36, 1] }} className="flex gap-4 p-4 rounded-xl" style={{ border: `1px solid ${color}18`, background: `${color}05` }}>
               <div className="flex-shrink-0 w-9 h-9 rounded-lg flex items-center justify-center text-base" style={{ background: `${color}12` }}>{icon}</div>
-              <div className="flex flex-col gap-1"><span className="text-base font-semibold" style={{ color }}>{title}</span><p className="text-slate-500 text-base leading-relaxed">{desc}</p></div>
+              <div className="flex flex-col gap-1"><span className="text-base font-semibold" style={{ color }}>{title}</span><p className="text-slate-700 text-base leading-relaxed">{desc}</p></div>
             </motion.div>
           ))}
         </RightPanelLight>

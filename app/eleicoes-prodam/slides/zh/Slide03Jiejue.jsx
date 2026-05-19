@@ -22,7 +22,7 @@ export default function Slide03Jiejue() {
           <TagLabelLight color={GREEN}>解决方案</TagLabelLight>
           <GradientTitleLight>选举即服务</GradientTitleLight>
           <SubtitleBarLight>从投票到计票，全程无忧</SubtitleBarLight>
-          <p className="text-slate-500 text-base leading-relaxed">覆盖完整选举周期的模块化平台——从候选人登记到结果公布。</p>
+          <p className="text-slate-700 text-base leading-relaxed">覆盖完整选举周期的模块化平台——从候选人登记到结果公布。</p>
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.85 }} className="rounded-xl p-4" style={{ background: `${GREEN}08`, border: `1px solid ${GREEN}25` }}>
             <div className="flex items-start gap-3"><span className="text-lg flex-shrink-0">✅</span><div className="flex flex-col gap-1"><span className="text-xs font-mono font-semibold tracking-wider" style={{ color: GREEN }}>核心优势</span><p className="text-slate-600 text-base leading-relaxed">完全可配置——无需昂贵定制，无需返工。</p></div></div>
           </motion.div>

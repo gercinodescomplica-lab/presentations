@@ -62,11 +62,11 @@ export default function Slide06Roadmap() {
             <div className="grid grid-cols-2 gap-4">
               <div className="flex flex-col gap-1">
                 <span className="font-heading font-bold text-4xl" style={{ color: GOLD }}>6</span>
-                <span className="text-slate-500 text-sm">eleições previstas</span>
+                <span className="text-slate-600 text-sm">eleições previstas</span>
               </div>
               <div className="flex flex-col gap-1">
                 <span className="font-heading font-bold text-4xl" style={{ color: GOLD }}>67K</span>
-                <span className="text-slate-500 text-sm">cidadãos participantes</span>
+                <span className="text-slate-600 text-sm">cidadãos participantes</span>
               </div>
             </div>
           </motion.div>
@@ -113,10 +113,10 @@ export default function Slide06Roadmap() {
                       >
                         {status}
                       </span>
-                      <span className="text-[10px] font-mono text-slate-300">{quarter}</span>
+                      <span className="text-[10px] font-mono text-slate-500">{quarter}</span>
                     </div>
                   </div>
-                  <p className="text-slate-500 text-base leading-relaxed">{desc}</p>
+                  <p className="text-slate-700 text-base leading-relaxed">{desc}</p>
                 </div>
               </motion.div>
             ))}

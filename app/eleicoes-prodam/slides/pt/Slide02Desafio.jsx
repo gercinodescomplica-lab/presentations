@@ -29,7 +29,7 @@ export default function Slide02Desafio() {
           <SubtitleBarLight>Alta visibilidade · Janela de execução concentrada</SubtitleBarLight>
 
           <p className="text-slate-600 text-base leading-relaxed">
-            Eleições ocorrem em poucas horas, com máxima exposição institucional. Os sistemas atuais deixam os órgãos públicos vulneráveis a <strong>4 gaps recorrentes</strong> — todos evitáveis.
+            Máxima exposição, mínima margem de erro. Os sistemas atuais geram <strong>4 gaps recorrentes</strong> — todos evitáveis.
           </p>
 
           {/* Execution window bar */}
@@ -83,7 +83,7 @@ export default function Slide02Desafio() {
             transition={{ delay: 0.3 }}
             className="flex flex-col gap-1 pb-3 border-b border-slate-100"
           >
-            <p className="text-xs font-mono font-bold tracking-widest text-slate-400 uppercase">
+            <p className="text-xs font-mono font-bold tracking-widest text-slate-600 uppercase">
               Os 4 gaps que expõem seu processo eleitoral
             </p>
           </motion.div>

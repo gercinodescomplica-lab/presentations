@@ -21,7 +21,7 @@ export default function Slide06Dorozhnaya() {
           <TagLabelLight color={PURPLE}>Дорожная карта</TagLabelLight>
           <GradientTitleLight>Куда мы движемся<br />в 2026 году</GradientTitleLight>
           <SubtitleBarLight>Непрерывные инновации платформы</SubtitleBarLight>
-          <p className="text-slate-500 text-base leading-relaxed">Платформа эволюционирует с каждым избирательным циклом, внедряя ИИ и новые функции.</p>
+          <p className="text-slate-700 text-base leading-relaxed">Платформа эволюционирует с каждым избирательным циклом, внедряя ИИ и новые функции.</p>
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.85 }} className="rounded-xl p-4 flex flex-col gap-3" style={{ background: `${GOLD}08`, border: `1px solid ${GOLD}25` }}>
             <span className="text-[10px] font-mono font-semibold tracking-wider" style={{ color: GOLD }}>ПРОГНОЗ НА 2026</span>
             <div className="grid grid-cols-2 gap-3">
@@ -39,7 +39,7 @@ export default function Slide06Dorozhnaya() {
                 <div className="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center text-xl" style={{ background: `${color}10` }}>{icon}</div>
                 <div className="flex flex-col gap-1 flex-1">
                   <div className="flex items-center justify-between"><span className="text-base font-semibold" style={{ color }}>{title}</span><span className="text-xs font-mono font-semibold tracking-widest px-2 py-0.5 rounded-full" style={{ background: `${color}12`, color }}>{status}</span></div>
-                  <p className="text-slate-500 text-base leading-relaxed">{desc}</p>
+                  <p className="text-slate-700 text-base leading-relaxed">{desc}</p>
                 </div>
               </motion.div>
             ))}

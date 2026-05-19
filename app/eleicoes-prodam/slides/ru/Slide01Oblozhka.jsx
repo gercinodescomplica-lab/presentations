@@ -21,15 +21,15 @@ export default function Slide01Oblozhka() {
               <div className="w-14 h-14 rounded-xl flex items-center justify-center text-3xl" style={{ background: `${BLUE}10`, border: `1px solid ${BLUE}20` }}>🗳️</div>
               <div className="h-px flex-1" style={{ background: `linear-gradient(90deg, ${BLUE}40, transparent)` }} />
             </motion.div>
-            <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }} className="font-heading font-bold leading-none tracking-tight" style={{ fontSize: 'clamp(1.9rem, 3.5vw, 3rem)', background: `linear-gradient(135deg, #0f172a 0%, ${BLUE} 65%, ${GREEN} 100%)`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+            <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }} className="font-heading font-bold leading-none tracking-tight" style={{ fontSize: '3.5rem', background: `linear-gradient(135deg, #0f172a 0%, ${BLUE} 65%, ${GREEN} 100%)`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
               PRODAM Выборы:<br />Технологии, которые<br />гарантируют каждый голос
             </motion.h1>
             <motion.div initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 0.9, delay: 0.7, ease: [0.22, 1, 0.36, 1] }} className="w-36 h-[3px] origin-left rounded-full" style={{ background: `linear-gradient(90deg, ${BLUE}, ${GREEN})` }} />
             <motion.p initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.85 }} className="text-slate-500 text-lg leading-relaxed font-light">Комплексное решение для управления выборами в муниципальных органах власти</motion.p>
           </div>
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 1.2 }} className="flex flex-col gap-2">
-            <div className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full" style={{ background: GOLD }} /><span className="text-slate-400 text-xs font-mono tracking-widest">DRM · ПОСЛЕПРОДАЖНОЕ · SaaS</span></div>
-            <div className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full opacity-0" /><span className="text-slate-300 text-xs font-mono tracking-widest">PRODAM · 2026</span></div>
+            <div className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full" style={{ background: GOLD }} /><span className="text-slate-600 text-xs font-mono tracking-widest">DRM · ПОСЛЕПРОДАЖНОЕ · SaaS</span></div>
+            <div className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full opacity-0" /><span className="text-slate-500 text-xs font-mono tracking-widest">PRODAM · 2026</span></div>
           </motion.div>
         </div>
         <div className="relative z-10 flex-1 flex flex-col py-14 px-10 gap-6 bg-white">
@@ -53,7 +53,7 @@ export default function Slide01Oblozhka() {
             ))}
           </div>
         </div>
-        <div className="absolute top-6 right-8 flex items-center gap-2 z-20"><span className="text-slate-300 text-xs font-mono tracking-widest">01</span><span className="text-slate-200 text-xs font-mono">·</span><span className="text-slate-300 text-xs font-mono tracking-widest">ОБЛОЖКА</span></div>
+        <div className="absolute top-6 right-8 flex items-center gap-2 z-20"><span className="text-slate-500 text-xs font-mono tracking-widest">01</span><span className="text-slate-400 text-xs font-mono">·</span><span className="text-slate-500 text-xs font-mono tracking-widest">ОБЛОЖКА</span></div>
       </motion.div>
     </div>
   )

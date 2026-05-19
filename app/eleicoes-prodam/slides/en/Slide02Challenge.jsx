@@ -20,7 +20,7 @@ export default function Slide02Challenge() {
           <TagLabelLight color={RED}>The Challenge</TagLabelLight>
           <GradientTitleLight>Simple rules,<br />critical execution</GradientTitleLight>
           <SubtitleBarLight>High visibility · Zero margin for error</SubtitleBarLight>
-          <p className="text-slate-500 text-base leading-relaxed">Elections have an execution window concentrated in just a few hours. Institutional visibility is at its peak and any failure compromises the body's credibility.</p>
+          <p className="text-slate-700 text-base leading-relaxed">Maximum exposure, minimum margin for error — 4 recurring gaps that put every election at risk.</p>
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8 }} className="rounded-xl p-4 flex flex-col gap-2" style={{ background: `${RED}06`, border: `1px solid ${RED}20` }}>
             <span className="text-xs font-mono tracking-wide" style={{ color: RED }}>CRITICAL EXECUTION WINDOW</span>
             <div className="flex items-center gap-1.5">
@@ -39,7 +39,7 @@ export default function Slide02Challenge() {
               <div className="flex-shrink-0 w-9 h-9 rounded-lg flex items-center justify-center text-base" style={{ background: `${color}12` }}>{icon}</div>
               <div className="flex flex-col gap-1">
                 <span className="text-base font-semibold" style={{ color }}>{title}</span>
-                <p className="text-slate-500 text-base leading-relaxed">{desc}</p>
+                <p className="text-slate-700 text-base leading-relaxed">{desc}</p>
               </div>
             </motion.div>
           ))}

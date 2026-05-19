@@ -12,7 +12,7 @@ const modules = [
   {
     Icon: Monitor,
     name: 'Urna Online',
-    desc: 'Votação 100% remota, integrada ao Microsoft 365. Qualquer eleitor vota de onde estiver.',
+    desc: 'Votação remota com login via Microsoft 365.',
     color: BLUE,
     tag: 'Remoto',
     benefit: 'Sem deslocamento',
@@ -20,7 +20,7 @@ const modules = [
   {
     Icon: Building2,
     name: 'Urna Presencial',
-    desc: 'Sistema de mesário digital para grandes conselhos e assembleias com votação física.',
+    desc: 'Mesário digital para conselhos e assembleias presenciais.',
     color: GREEN,
     tag: 'Presencial',
     benefit: 'Fluxo controlado',
@@ -28,7 +28,7 @@ const modules = [
   {
     Icon: BarChart3,
     name: 'Apuração TSE',
-    desc: 'Leitura automática de boletins de urna eletrônica — resultados em tempo real.',
+    desc: 'Leitura automática de boletins — resultado imediato.',
     color: CYAN,
     tag: 'Integração TSE',
     benefit: 'Resultado imediato',
@@ -36,7 +36,7 @@ const modules = [
   {
     Icon: Settings2,
     name: 'Backoffice',
-    desc: 'Painel administrativo completo: o próprio cliente opera a eleição sem depender da PRODAM.',
+    desc: 'O próprio cliente opera a eleição de forma independente.',
     color: GOLD,
     tag: 'Gestão autônoma',
     benefit: 'Independência total',
@@ -59,7 +59,7 @@ export default function Slide03Solucao() {
           <SubtitleBarLight>Do cadastro ao resultado — sem lacunas</SubtitleBarLight>
 
           <p className="text-slate-700 text-base leading-relaxed">
-            A PRODAM entrega <strong>4 módulos integrados</strong> que cobrem cada etapa do processo eleitoral. Um ecossistema único, sem necessidade de sistemas paralelos.
+            <strong>4 módulos integrados</strong> — cobertura de ponta a ponta, sem sistemas paralelos.
           </p>
 
           {/* Flow pills */}
@@ -84,7 +84,7 @@ export default function Slide03Solucao() {
                   >
                     {step}
                   </motion.div>
-                  {i < flow.length - 1 && <ChevronRight size={13} style={{ color: '#CBD5E1' }} />}
+                  {i < flow.length - 1 && <ChevronRight size={13} style={{ color: '#94A3B8' }} />}
                 </div>
               ))}
             </div>
@@ -114,7 +114,7 @@ export default function Slide03Solucao() {
             transition={{ delay: 0.3 }}
             className="pb-3 border-b border-slate-100"
           >
-            <p className="text-xs font-mono font-bold tracking-widest text-slate-500 uppercase">
+            <p className="text-xs font-mono font-bold tracking-widest text-slate-600 uppercase">
               Os 4 módulos da plataforma
             </p>
           </motion.div>

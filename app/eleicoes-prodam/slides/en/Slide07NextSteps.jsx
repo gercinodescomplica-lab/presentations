@@ -6,9 +6,9 @@ const GREEN = '#059669'
 const GOLD = '#D97706'
 
 const steps = [
-  { number: '01', icon: '🔍', title: 'Assessment', desc: "Understand your body's electoral model and map specific needs.", color: BLUE },
-  { number: '02', icon: '🖥️', title: 'Demo', desc: 'Present the platform in live operation with scenarios from your process.', color: GREEN },
-  { number: '03', icon: '📋', title: 'Proposal', desc: 'Structure the complete operation with guaranteed SLA and defined timeline.', color: GOLD },
+  { number: '01', icon: '🔍', title: 'Assessment', desc: 'Map your institution\'s electoral model and specific needs.', color: BLUE },
+  { number: '02', icon: '🖥️', title: 'Demo', desc: 'Live demo with real scenarios from your process.', color: GREEN },
+  { number: '03', icon: '📋', title: 'Proposal', desc: 'Full operation: guaranteed SLA, defined timeline.', color: GOLD },
 ]
 
 export default function Slide07NextSteps() {
@@ -18,15 +18,15 @@ export default function Slide07NextSteps() {
         <div className="absolute top-0 left-0 right-0 h-1 rounded-t-3xl" style={{ background: `linear-gradient(90deg, ${BLUE}, ${GREEN})` }} />
         <div className="absolute inset-0 pointer-events-none opacity-[0.025]" style={{ backgroundImage: 'linear-gradient(rgba(26,86,219,1) 1px, transparent 1px), linear-gradient(90deg, rgba(26,86,219,1) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
         <div className="absolute top-6 left-8 flex items-center gap-2 z-20">
-          <span className="text-slate-300 text-xs font-mono tracking-widest">07</span>
-          <span className="text-slate-200 text-xs font-mono">·</span>
-          <span className="text-slate-300 text-xs font-mono tracking-widest">NEXT STEPS</span>
+          <span className="text-slate-500 text-xs font-mono tracking-widest">07</span>
+          <span className="text-slate-400 text-xs font-mono">·</span>
+          <span className="text-slate-500 text-xs font-mono tracking-widest">NEXT STEPS</span>
         </div>
         <div className="relative z-10 flex flex-col items-center gap-4 text-center">
           <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-semibold tracking-wider" style={{ border: `1px solid ${GREEN}30`, background: `${GREEN}08`, color: GREEN }}>
             <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: GREEN }} />NEXT STEPS
           </motion.div>
-          <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }} className="font-heading font-bold leading-tight text-center" style={{ fontSize: 'clamp(2rem, 3.8vw, 3rem)', background: `linear-gradient(135deg, #0f172a 0%, ${BLUE} 60%, ${GREEN} 100%)`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+          <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }} className="font-heading font-bold leading-tight text-center" style={{ fontSize: '2.4rem', background: `linear-gradient(135deg, #0f172a 0%, ${BLUE} 60%, ${GREEN} 100%)`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
             Ready to ensure the success<br />of your next election?
           </motion.h2>
         </div>
@@ -40,18 +40,18 @@ export default function Slide07NextSteps() {
               </div>
               <div className="flex flex-col gap-1.5">
                 <span className="font-semibold text-lg" style={{ color }}>{title}</span>
-                <p className="text-slate-500 text-base leading-relaxed">{desc}</p>
+                <p className="text-slate-700 text-base leading-relaxed">{desc}</p>
               </div>
             </motion.div>
           ))}
         </div>
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.95 }} className="relative z-10 flex flex-col items-center gap-4 max-w-2xl text-center">
           <div className="w-full h-px bg-slate-100" />
-          <p className="font-heading font-light text-lg italic leading-relaxed text-slate-500">"When visibility is high and failure is not an option,<br />PRODAM is the right choice."</p>
+          <p className="font-heading font-light text-lg italic leading-relaxed text-slate-600">"When visibility is high and failure is not an option,<br />PRODAM is the right choice."</p>
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2"><span className="text-[11px] font-mono text-slate-400">📩</span><span className="text-[11px] font-mono tracking-widest text-slate-500">nome@prodam.sp.gov.br</span></div>
             <div className="h-3 w-px bg-slate-200" />
-            <span className="text-[11px] font-mono tracking-widest text-slate-300">PRODAM · 2026</span>
+            <span className="text-[11px] font-mono tracking-widest text-slate-500">PRODAM · 2026</span>
           </div>
         </motion.div>
       </motion.div>

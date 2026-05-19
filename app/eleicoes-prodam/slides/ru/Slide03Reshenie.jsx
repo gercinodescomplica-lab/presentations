@@ -22,7 +22,7 @@ export default function Slide03Reshenie() {
           <TagLabelLight color={GREEN}>Решение</TagLabelLight>
           <GradientTitleLight>Выборы как Сервис</GradientTitleLight>
           <SubtitleBarLight>От голосования до подсчёта без забот</SubtitleBarLight>
-          <p className="text-slate-500 text-base leading-relaxed">Модульная платформа, охватывающая полный избирательный цикл — от регистрации кандидатов до публикации результатов.</p>
+          <p className="text-slate-700 text-base leading-relaxed">Модульная платформа, охватывающая полный избирательный цикл — от регистрации кандидатов до публикации результатов.</p>
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.85 }} className="rounded-xl p-4" style={{ background: `${GREEN}08`, border: `1px solid ${GREEN}25` }}>
             <div className="flex items-start gap-3"><span className="text-lg flex-shrink-0">✅</span><div className="flex flex-col gap-1"><span className="text-xs font-mono font-semibold tracking-wider" style={{ color: GREEN }}>КЛЮЧЕВОЕ ПРЕИМУЩЕСТВО</span><p className="text-slate-600 text-base leading-relaxed">Полностью настраиваемо — без дорогой кастомизации, без переработки.</p></div></div>
           </motion.div>

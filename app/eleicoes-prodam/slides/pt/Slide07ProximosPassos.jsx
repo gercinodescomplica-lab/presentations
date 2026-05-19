@@ -6,9 +6,9 @@ const GREEN = '#059669'
 const GOLD = '#D97706'
 
 const steps = [
-  { number: '01', icon: '🔍', title: 'Diagnóstico', desc: 'Entender o modelo eleitoral do seu órgão e mapear necessidades específicas.', color: BLUE },
-  { number: '02', icon: '🖥️', title: 'Demonstração', desc: 'Apresentar a plataforma em funcionamento real com cenários do seu processo.', color: GREEN },
-  { number: '03', icon: '📋', title: 'Proposta', desc: 'Estruturar a operação completa com SLA garantido e cronograma definido.', color: GOLD },
+  { number: '01', icon: '🔍', title: 'Diagnóstico', desc: 'Mapeamos o modelo eleitoral e necessidades do seu órgão.', color: BLUE },
+  { number: '02', icon: '🖥️', title: 'Demonstração', desc: 'Demo ao vivo com cenários reais do seu processo.', color: GREEN },
+  { number: '03', icon: '📋', title: 'Proposta', desc: 'Operação completa: SLA garantido e cronograma fechado.', color: GOLD },
 ]
 
 export default function Slide07ProximosPassos() {
@@ -38,9 +38,9 @@ export default function Slide07ProximosPassos() {
 
         {/* Slide label */}
         <div className="absolute top-6 left-8 flex items-center gap-2 z-20">
-          <span className="text-slate-300 text-xs font-mono tracking-widest">07</span>
-          <span className="text-slate-200 text-xs font-mono">·</span>
-          <span className="text-slate-300 text-xs font-mono tracking-widest">PRÓXIMOS PASSOS</span>
+          <span className="text-slate-500 text-xs font-mono tracking-widest">07</span>
+          <span className="text-slate-400 text-xs font-mono">·</span>
+          <span className="text-slate-500 text-xs font-mono tracking-widest">PRÓXIMOS PASSOS</span>
         </div>
 
         {/* Header */}
@@ -62,7 +62,7 @@ export default function Slide07ProximosPassos() {
             transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="font-heading font-bold leading-tight text-center"
             style={{
-              fontSize: 'clamp(2rem, 3.8vw, 3rem)',
+              fontSize: '2.4rem',
               background: `linear-gradient(135deg, #0f172a 0%, ${BLUE} 60%, ${GREEN} 100%)`,
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
@@ -93,7 +93,7 @@ export default function Slide07ProximosPassos() {
 
               <div className="flex flex-col gap-1.5">
                 <span className="font-semibold text-lg" style={{ color }}>{title}</span>
-                <p className="text-slate-500 text-base leading-relaxed">{desc}</p>
+                <p className="text-slate-700 text-base leading-relaxed">{desc}</p>
               </div>
             </motion.div>
           ))}
@@ -108,17 +108,17 @@ export default function Slide07ProximosPassos() {
         >
           <div className="w-full h-px bg-slate-100" />
 
-          <p className="font-heading font-light text-lg italic leading-relaxed text-slate-500">
+          <p className="font-heading font-light text-lg italic leading-relaxed text-slate-600">
             "Quando a visibilidade é alta e o erro não é opção,<br />a PRODAM é a escolha certa."
           </p>
 
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
-              <span className="text-[11px] font-mono text-slate-400">📩</span>
-              <span className="text-[11px] font-mono tracking-widest text-slate-500">nome@prodam.sp.gov.br</span>
+              <span className="text-[11px] font-mono text-slate-500">📩</span>
+              <span className="text-[11px] font-mono tracking-widest text-slate-600">nome@prodam.sp.gov.br</span>
             </div>
             <div className="h-3 w-px bg-slate-200" />
-            <span className="text-[11px] font-mono tracking-widest text-slate-300">PRODAM · 2026</span>
+            <span className="text-[11px] font-mono tracking-widest text-slate-500">PRODAM · 2026</span>
           </div>
         </motion.div>
       </motion.div>
