@@ -14,8 +14,7 @@ const roadmapItems = [
     title: 'Módulo de Assembleias',
     desc: 'Urna Online simplificada para votações de assembleia.',
     color: BLUE,
-    status: 'Em desenvolvimento',
-    quarter: 'Q1 2026',
+    status: 'Planejado',
   },
   {
     Icon: BrainCircuit,
@@ -23,7 +22,6 @@ const roadmapItems = [
     desc: 'Validação de documentos de candidatos e eleitores por IA.',
     color: PURPLE,
     status: 'Planejado',
-    quarter: 'Q2 2026',
   },
   {
     Icon: Globe,
@@ -31,7 +29,6 @@ const roadmapItems = [
     desc: 'Histórico público de todas as eleições — transparência total.',
     color: GREEN,
     status: 'Planejado',
-    quarter: 'Q3 2026',
   },
 ]
 
@@ -81,7 +78,7 @@ export default function Slide06Roadmap() {
               style={{ background: `linear-gradient(180deg, ${PURPLE}40, ${BLUE}40, ${GREEN}40)` }}
             />
 
-            {roadmapItems.map(({ Icon, title, desc, color, status, quarter }, i) => (
+            {roadmapItems.map(({ Icon, title, desc, color, status }, i) => (
               <motion.div
                 key={title}
                 initial={{ opacity: 0, x: 28 }}
@@ -106,15 +103,12 @@ export default function Slide06Roadmap() {
                 >
                   <div className="flex items-center justify-between">
                     <span className="text-base font-bold" style={{ color }}>{title}</span>
-                    <div className="flex items-center gap-2">
-                      <span
-                        className="text-[10px] font-mono font-bold tracking-widest px-2 py-0.5 rounded-full"
-                        style={{ background: `${color}12`, color }}
-                      >
-                        {status}
-                      </span>
-                      <span className="text-[10px] font-mono text-slate-500">{quarter}</span>
-                    </div>
+                    <span
+                      className="text-[10px] font-mono font-bold tracking-widest px-2 py-0.5 rounded-full"
+                      style={{ background: `${color}12`, color }}
+                    >
+                      {status}
+                    </span>
                   </div>
                   <p className="text-slate-700 text-base leading-relaxed">{desc}</p>
                 </div>

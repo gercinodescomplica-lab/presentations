@@ -8,7 +8,7 @@ const PURPLE = '#7C3AED'
 const GOLD = '#D97706'
 
 const items = [
-  { icon: '🏛️', title: '大会模块', desc: '在线投票系统的简化版本，适用于精简管理的大会投票。', color: BLUE, status: '开发中' },
+  { icon: '🏛️', title: '大会模块', desc: '在线投票系统的简化版本，适用于精简管理的大会投票。', color: BLUE, status: '计划中' },
   { icon: '🤖', title: '报名+AI', desc: '通过人工智能验证候选人和选民的文件。', color: PURPLE, status: '计划中' },
   { icon: '🌐', title: '永久门户', desc: '所有已举行选举的可查询历史记录——完全透明。', color: GREEN, status: '计划中' },
 ]

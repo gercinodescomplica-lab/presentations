@@ -8,7 +8,7 @@ const PURPLE = '#7C3AED'
 const GOLD = '#D97706'
 
 const items = [
-  { icon: '🏛️', title: 'Módulo de Asambleas', desc: 'Versión simplificada de la Urna en Línea para votaciones de asamblea con administración reducida.', color: BLUE, status: 'En desarrollo' },
+  { icon: '🏛️', title: 'Módulo de Asambleas', desc: 'Versión simplificada de la Urna en Línea para votaciones de asamblea con administración reducida.', color: BLUE, status: 'Planificado' },
   { icon: '🤖', title: 'Inscripción + IA', desc: 'Validación de documentos de candidatos y electores mediante Inteligencia Artificial.', color: PURPLE, status: 'Planificado' },
   { icon: '🌐', title: 'Portal Permanente', desc: 'Historial consultable de todas las elecciones realizadas — transparencia total.', color: GREEN, status: 'Planificado' },
 ]

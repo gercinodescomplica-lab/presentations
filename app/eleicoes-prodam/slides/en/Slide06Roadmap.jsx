@@ -8,7 +8,7 @@ const PURPLE = '#7C3AED'
 const GOLD = '#D97706'
 
 const roadmapItems = [
-  { icon: '🏛️', title: 'Assembly Module', desc: 'Simplified version of the Online Ballot for assembly voting with a streamlined admin.', color: BLUE, status: 'In development' },
+  { icon: '🏛️', title: 'Assembly Module', desc: 'Simplified version of the Online Ballot for assembly voting with a streamlined admin.', color: BLUE, status: 'Planned' },
   { icon: '🤖', title: 'Registration + AI', desc: 'AI-powered document validation for candidates and voters.', color: PURPLE, status: 'Planned' },
   { icon: '🌐', title: 'Permanent Portal', desc: 'Searchable history of all elections held — full transparency.', color: GREEN, status: 'Planned' },
 ]

@@ -12,7 +12,7 @@ const stats = [
   { value: '+1M', label: 'Votos processados', color: GOLD },
 ]
 
-const clients = ['CMDCA', 'IPREM', 'COMAS', 'CMH', 'CPM', 'CMPU', 'SMADS', 'SEHAB', 'PRODAM']
+const clients = ['CMDCA', 'IPREM', 'COMAS', 'CMH', 'CPM', 'CMPU', 'SMADS', 'SEHAB']
 
 export default function Slide05Credibilidade() {
   return (

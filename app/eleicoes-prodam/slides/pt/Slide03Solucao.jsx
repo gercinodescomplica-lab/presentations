@@ -14,15 +14,15 @@ const modules = [
     name: 'Urna Online',
     desc: 'Votação remota com login via Microsoft 365.',
     color: BLUE,
-    tag: 'Remoto',
+    tag: 'Eleitor',
     benefit: 'Sem deslocamento',
   },
   {
     Icon: Building2,
     name: 'Urna Presencial',
-    desc: 'Mesário digital para conselhos e assembleias presenciais.',
+    desc: 'Mesário digital para grandes conselhos e votações presenciais.',
     color: GREEN,
-    tag: 'Presencial',
+    tag: 'Mesário',
     benefit: 'Fluxo controlado',
   },
   {
@@ -30,7 +30,7 @@ const modules = [
     name: 'Apuração TSE',
     desc: 'Leitura automática de boletins — resultado imediato.',
     color: CYAN,
-    tag: 'Integração TSE',
+    tag: 'Comissão',
     benefit: 'Resultado imediato',
   },
   {
@@ -38,7 +38,7 @@ const modules = [
     name: 'Backoffice',
     desc: 'O próprio cliente opera a eleição de forma independente.',
     color: GOLD,
-    tag: 'Gestão autônoma',
+    tag: 'Administrador',
     benefit: 'Independência total',
   },
 ]
@@ -120,7 +120,7 @@ export default function Slide03Solucao() {
           </motion.div>
 
           {/* Module list — horizontal cards filling height */}
-          {modules.map(({ Icon, name, desc, color, tag, benefit }, i) => (
+          {modules.map(({ Icon, name, desc, color, benefit }, i) => (
             <motion.div
               key={name}
               initial={{ opacity: 0, x: 24 }}
@@ -142,15 +142,7 @@ export default function Slide03Solucao() {
 
               {/* Content */}
               <div className="flex flex-col gap-1 flex-1">
-                <div className="flex items-center gap-2">
-                  <span className="text-base font-bold" style={{ color }}>{name}</span>
-                  <span
-                    className="text-[10px] font-mono font-bold tracking-widest px-2 py-0.5 rounded-full"
-                    style={{ background: `${color}12`, color }}
-                  >
-                    {tag}
-                  </span>
-                </div>
+                <span className="text-base font-bold" style={{ color }}>{name}</span>
                 <p className="text-slate-700 text-sm leading-relaxed">{desc}</p>
               </div>
 
