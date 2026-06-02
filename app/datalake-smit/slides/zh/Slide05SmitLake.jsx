@@ -39,8 +39,7 @@ export default function Slide05SmitLake() {
               💻
             </div>
             <motion.h2 initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} whileHover={{ scale: 1.015, y: -4, boxShadow: '0 8px 32px rgba(47,128,255,0.18), 0 0 0 1px rgba(47,128,255,0.12)', transition: { duration: 0.22, ease: [0.22, 1, 0.36, 1] } }} transition={{ delay: 0.35, duration: 0.7 }}
-              className="font-heading font-bold leading-tight" style={{ color: '#0D1B3E' }}
-              style={{ fontSize: 'clamp(1.8rem, 3vw, 2.4rem)' }}>
+              className="font-heading font-bold leading-tight" style={{ color: '#0D1B3E', fontSize: 'clamp(1.8rem, 3vw, 2.4rem)' }}>
               SMIT数据湖
             </motion.h2>
           </div>

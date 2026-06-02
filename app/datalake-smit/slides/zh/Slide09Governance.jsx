@@ -53,7 +53,7 @@ export default function Slide09Governance() {
               治理模型
             </motion.span>
             <motion.h2 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} whileHover={{ scale: 1.015, y: -4, boxShadow: '0 8px 32px rgba(47,128,255,0.18), 0 0 0 1px rgba(47,128,255,0.12)', transition: { duration: 0.22, ease: [0.22, 1, 0.36, 1] } }} transition={{ delay: 0.35 }}
-              className="font-heading font-bold" style={{ color: '#0D1B3E' }} style={{ fontSize: '1.9rem' }}>
+              className="font-heading font-bold" style={{ color: '#0D1B3E', fontSize: '1.9rem' }}>
               三方治理：机构 + PRODAM + Microsoft
             </motion.h2>
           </div>
