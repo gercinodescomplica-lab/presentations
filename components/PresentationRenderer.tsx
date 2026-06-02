@@ -12,7 +12,7 @@
  * component only wires the slides prop into the existing system.
  */
 
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { usePresentation } from '@/hooks/usePresentation'
 import ScaledCanvas from '@/components/ScaledCanvas'
 import SlideContainer from '@/components/SlideContainer'
@@ -44,6 +44,19 @@ export default function PresentationRenderer({ slides, theme = 'dark', showLangu
   } = presentation
 
   const CurrentSlide = slides[currentSlide]
+
+  const lastScrollTime = useRef(0)
+  useEffect(() => {
+    const handleWheel = (e: WheelEvent) => {
+      const now = Date.now()
+      if (now - lastScrollTime.current < 600) return
+      lastScrollTime.current = now
+      if (e.deltaY > 0) prevSlide()
+      else nextSlide()
+    }
+    window.addEventListener('wheel', handleWheel, { passive: true })
+    return () => window.removeEventListener('wheel', handleWheel)
+  }, [nextSlide, prevSlide])
 
   return (
     <SlideFrame isPresenting={isPresenting} theme={theme}>

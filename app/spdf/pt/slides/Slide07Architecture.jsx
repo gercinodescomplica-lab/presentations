@@ -76,7 +76,7 @@ export default function Slide07Architecture() {
              <div className="w-px h-12" style={{ background: 'linear-gradient(180deg, transparent, rgba(0,0,0,0.1), transparent)' }} />
 
              <div className="flex flex-col gap-1 items-center text-center">
-                <span className="text-3xl font-heading font-bold" style={{ color: '#1e3a8a' }}>1.000+</span>
+                <span className="text-3xl font-heading font-bold" style={{ color: '#1e3a8a' }}>2.000+</span>
                 <span className="text-slate-400 font-bold text-[10px] font-mono tracking-wider uppercase">Usuários Simultâneos</span>
              </div>
 

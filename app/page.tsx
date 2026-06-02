@@ -95,6 +95,15 @@ const PRESENTATIONS = [
     href: '/eleicoes-prodam',
     slideCount: 7,
   },
+  {
+    id: 'datalake-smit',
+    title: 'Data Lake Paulistano',
+    description: 'Documento de visão para a SMIT — arquitetura federada de dados por secretaria, parceria Microsoft e governança LGPD.',
+    gradient: 'from-blue-600 via-cyan-500 to-sky-400',
+    icon: Database,
+    href: '/datalake-smit',
+    slideCount: 14,
+  },
 ]
 
 export default function HomePage() {
