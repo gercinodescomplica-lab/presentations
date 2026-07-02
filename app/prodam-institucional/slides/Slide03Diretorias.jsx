@@ -4,38 +4,45 @@ import { SlideFrame, MINT, TEAL } from './_shared'
 
 const diretorias = [
   {
+    code: 'PRE',
+    name: 'Presidência',
+    lead: 'Francisco de Padovan Forbes',
+    headcount: '68 pessoas',
+    tags: [],
+  },
+  {
     code: 'DDS',
     name: 'Desenvolvimento e Sustentação de Sistemas',
     lead: 'Gustavo Guedes Alberto ',
-    headcount: 'NN pessoas',
+    headcount: '340 pessoas',
     tags: ['Soluções e Sistemas 1-4', 'Engenharia de Sistemas', 'Inteligência Artificial'],
   },
   {
     code: 'DIT',
     name: 'Infraestrutura e Tecnologia',
     lead: 'Carlos Eduardo Trindade',
-    headcount: 'NN pessoas',
+    headcount: '237 pessoas',
     tags: ['Infraestrutura', 'Serviços', 'Telecom', 'Operações', 'Segurança da Informação'],
   },
   {
     code: 'DAF',
     name: 'Administração e Finanças',
     lead: 'Luciano Felipe de Paula Capato',
-    headcount: 'NN pessoas',
+    headcount: '101 pessoas',
     tags: ['Logística', 'Compras', 'Financeiro', 'Gestão de Pessoas', 'ERP'],
   },
   {
     code: 'DRM',
     name: 'Relacionamento e Inteligência de Mercado',
     lead: 'Tiago Miguel da Silva Luz',
-    headcount: 'NN pessoas',
+    headcount: '59 pessoas',
     tags: ['Customer Experience', 'Comunicação', 'Parcerias', 'Store', 'Relacionamento'],
   },
   {
     code: 'DIPAR',
     name: 'Participação',
     lead: 'Sidney Tobias de Souza',
-    headcount: 'NN pessoas',
+    headcount: '4 pessoas',
     tags: [],
   },
 ]
@@ -61,7 +68,7 @@ export default function Slide03Diretorias() {
           className="font-heading font-bold text-white leading-tight tracking-tight mb-4"
           style={{ fontSize: 'clamp(1.6rem, 2.6vw, 2.1rem)' }}
         >
-          Cinco diretorias, uma missão pública
+          Presidência e cinco diretorias, uma missão pública
         </motion.h2>
 
         <div className="grid grid-cols-3 grid-rows-2 gap-3 flex-1 min-h-0 pb-4">
