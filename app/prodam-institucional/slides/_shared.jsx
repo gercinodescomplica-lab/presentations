@@ -41,12 +41,12 @@ export function ProdamLogo({ delay = 0.2, size = 34 }) {
 
 export function SlideFrame({ slideNum, label, children }) {
   return (
-    <div className="w-full h-full flex items-center justify-center p-6 lg:p-10">
+    <div className="pi-slide-root w-full h-full flex items-center justify-center p-6 lg:p-10">
       <motion.div
         initial={{ opacity: 0, scale: 0.97 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="relative w-full h-full max-w-[1400px] max-h-[820px] rounded-3xl overflow-hidden"
+        className="pi-slide-card relative w-full h-full max-w-[1400px] max-h-[820px] rounded-3xl overflow-hidden"
         style={{
           background: `linear-gradient(180deg, #11162A 0%, #141F3C 55%, #164759 80%, #1B7A6E 100%)`,
           border: `1px solid rgba(78, 204, 163, 0.18)`,
@@ -89,7 +89,7 @@ export function SlideFrame({ slideNum, label, children }) {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 1.2, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute bottom-0 left-0 right-0 h-[3px] origin-left"
+          className="pi-accent-line absolute bottom-0 left-0 right-0 h-[3px] origin-left"
           style={{ background: `linear-gradient(90deg, transparent, ${MINT}, ${TEAL}, transparent)` }}
         />
       </motion.div>

@@ -38,7 +38,7 @@ export default function Slide02Prodam() {
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.9, delay: 0.55 }}
-            className="w-24 h-[2px] origin-left rounded-full mb-6"
+            className="pi-accent-line w-24 h-[2px] origin-left rounded-full mb-6"
             style={{ background: `linear-gradient(90deg, ${MINT}, transparent)` }}
           />
 

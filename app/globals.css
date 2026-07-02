@@ -172,6 +172,71 @@ html, body {
     break-after: avoid;
     page-break-after: avoid;
   }
+
+  /* ── Global print fixes for all decks ─────────────────────────────────────
+     All decks follow the same pattern:
+       <div class="w-full h-full flex ... p-6 lg:p-10">   ← slide root
+         <motion.div class="... rounded-3xl overflow-hidden ...">  ← slide card
+     These rules make that pattern print edge-to-edge without a black frame,
+     without animation artefacts, and without cropping content. */
+
+  /* Zero outer padding so the card fills the page edge-to-edge */
+  .print-slide-page > div {
+    padding: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+  }
+
+  /* Slide card (direct child of the root wrapper) — remove rounded corners,
+     border and shadow so no frame shows around the page edges. */
+  .print-slide-page > div > div,
+  .print-slide-page > div > .rounded-3xl,
+  .print-slide-page > div > [class*="rounded-"] {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  /* Kill every animation and transition inside the printed slide so nothing
+     freezes mid-transform (decorative lines, spinning rings, etc.). */
+  .print-slide-page *,
+  .print-slide-page *::before,
+  .print-slide-page *::after {
+    animation: none !important;
+    animation-delay: 0s !important;
+    transition: none !important;
+  }
+
+  /* Framer-motion sometimes leaves inline opacity:0 on elements that never
+     animated in — force those exact zeros visible. Uses attribute selectors
+     that match the literal token "opacity: 0" only when followed by ; or "
+     to avoid matching decimals like opacity: 0.03 (subtle overlays). */
+  .print-slide-page [style*="opacity: 0;"],
+  .print-slide-page [style*="opacity:0;"],
+  .print-slide-page [style$="opacity: 0"],
+  .print-slide-page [style$="opacity:0"] {
+    opacity: 1 !important;
+  }
+
+  /* Hide decorative accent lines opted in via .pi-accent-line (per deck). */
+  .print-slide-page .pi-accent-line {
+    display: none !important;
+  }
+
+
+  /* Allow content in cards to render without being clipped by overflow. */
+  .print-slide-page .rounded-2xl,
+  .print-slide-page .rounded-xl {
+    page-break-inside: avoid;
+  }
 }
 
 @keyframes data-flow {

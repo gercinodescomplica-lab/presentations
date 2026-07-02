@@ -42,7 +42,7 @@ export default function Slide05Closing() {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 1, delay: 0.7 }}
-          className="w-32 h-[2px] origin-left rounded-full mb-10"
+          className="pi-accent-line w-32 h-[2px] origin-left rounded-full mb-10"
           style={{ background: `linear-gradient(90deg, ${MINT}, transparent)` }}
         />
 
