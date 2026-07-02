@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
-import { LucideIcon, Layers, Database, Smartphone, LayoutDashboard, ChevronRight, Briefcase, FileText, Bot, Lightbulb, Vote } from 'lucide-react'
+import { LucideIcon, Layers, Database, Smartphone, LayoutDashboard, ChevronRight, Briefcase, FileText, Bot, Lightbulb, Vote, Building2 } from 'lucide-react'
 
 const PRESENTATIONS = [
   {
@@ -94,6 +94,15 @@ const PRESENTATIONS = [
     icon: Vote,
     href: '/eleicoes-prodam',
     slideCount: 7,
+  },
+  {
+    id: 'prodam-institucional',
+    title: 'Prodam Institucional',
+    description: 'Apresentação institucional da Prodam — 52 anos de história, estrutura por diretorias e o marketplace Prodam Store.',
+    gradient: 'from-slate-800 via-teal-700 to-emerald-400',
+    icon: Building2,
+    href: '/prodam-institucional',
+    slideCount: 5,
   },
   {
     id: 'datalake-smit',
