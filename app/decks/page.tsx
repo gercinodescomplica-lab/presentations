@@ -6,6 +6,15 @@ import { LucideIcon, Layers, Database, Smartphone, LayoutDashboard, ChevronRight
 
 const PRESENTATIONS = [
   {
+    id: 'reuniao-diretoria-v2',
+    title: 'Reunião de Diretoria · v2',
+    description: 'Versão 2026 com identidade PRODAM (navy + laranja), portfólio DRM redesenhado e novos projetos.',
+    gradient: 'from-orange-600 via-orange-500 to-amber-400',
+    icon: Briefcase,
+    href: '/reuniao-diretoria-v2',
+    slideCount: 12,
+  },
+  {
     id: 'reuniao-diretoria',
     title: 'Reunião de Diretoria',
     description: 'Acompanhamento corporativo executivo, comercial e implantação de complexidade.',
