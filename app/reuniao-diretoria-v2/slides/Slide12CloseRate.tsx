@@ -152,10 +152,6 @@ export default function Slide12CloseRate() {
           <TrendingUp className="w-5 h-5 text-[#FF671D]" />
         </div>
         <div className="flex items-center gap-4">
-          <div className="flex items-center gap-2">
-            <div className="w-1.5 h-1.5 rounded-full bg-[#FF671D] animate-pulse" />
-            <span className="text-[#FF671D] font-mono text-xs uppercase tracking-widest">SLIDE 12</span>
-          </div>
           <h2 className="text-[22px] font-bold text-white leading-tight">
             Close Rate —{' '}
             <span className="text-[#FF671D]">Agosto de 25 a Abril de 26</span>

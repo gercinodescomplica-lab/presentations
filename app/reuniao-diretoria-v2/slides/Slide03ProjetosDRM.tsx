@@ -12,10 +12,6 @@ import {
   ExternalLink,
   Play,
   X,
-  Scale,
-  Users,
-  Cloud,
-  Handshake,
   type LucideIcon,
 } from 'lucide-react'
 
@@ -71,10 +67,10 @@ const projects: Project[] = [
     id: 'licit-monitor',
     Icon: Search,
     name: 'LicitMonitor',
-    tagline: 'Automação · Licitações Públicas',
+    tagline: 'Automação · Contratos Vencendo ',
     short: 'Monitora, analisa e acompanha contratos vencendo automaticamente.',
     long:
-      'Plataforma que consolida licitações públicas de múltiplas fontes, aplica IA para pontuar aderência e envia alertas — eliminando a busca manual site a site e acelerando o time-to-response.',
+      'Plataforma que consolida contratos de múltiplas fontes, aplica IA para pontuar aderência e envia alertas — eliminando a busca manual e acelerando o time-to-response.',
     color: '#FF8A47',
     href: 'https://licitmonitor.com',
   },
@@ -96,46 +92,6 @@ const projects: Project[] = [
     short: 'Automações com IA para melhoria de fluxos internos.',
     long:
       'Micro-projeto que auxilia com automações de IA para melhoria de fluxos internos.',
-    color: '#FF671D',
-  },
-  {
-    id: 'pasda',
-    Icon: Scale,
-    name: 'PASDA',
-    tagline: 'PGM · Dívida Ativa - 53.273.824 R$',
-    short: 'Várias demandas de dívida ativa da PGM.',
-    long:
-      'Portfólio de demandas ligadas à Dívida Ativa da Procuradoria Geral do Município (PGM). Consolida frentes de cobrança, análise jurídica e acompanhamento processual sob uma mesma esteira operacional.',
-    color: '#FF8A47',
-  },
-  {
-    id: 'esocial',
-    Icon: Users,
-    name: 'eSocial & Contratos Gov',
-    tagline: 'SEGES · Estabilizado',
-    short: 'Sistema estabilizado após ciclo de correções.',
-    long:
-      'Projeto do eSocial junto à Secretaria de Gestão Municipal (SGM). Após ciclo de estabilização, opera em regime normal — foco agora migra de correções para evolução e monitoramento.',
-    color: '#22c55e',
-  },
-  {
-    id: 'ms-aws',
-    Icon: Cloud,
-    name: 'Microsoft & AWS',
-    tagline: 'Cloud · Normalização de Processos',
-    short: 'Tratativas de normalização de processos com os provedores cloud.',
-    long:
-      'Frente de trabalho para normalizar os processos operacionais e contratuais junto à Microsoft e AWS. Objetivo: previsibilidade de consumo, alinhamento de SLAs e governança unificada de nuvem.',
-    color: '#A8D4F0',
-  },
-  {
-    id: 'parcerias-ia',
-    Icon: Handshake,
-    name: 'Parcerias IA',
-    tagline: 'Análise de Parceiros · Fluxo entre Áreas',
-    short: 'Análise automatizada de parceiros com IA e controle de fluxo.',
-    long:
-      'Sistema de parcerias que analisa parceiros de forma automatizada com IA e orquestra o fluxo entre as áreas envolvidas na aprovação. Reduz atrito interno e acelera a materialização de novos acordos.',
     color: '#FF671D',
   },
 ]
@@ -333,16 +289,6 @@ export default function Slide03ProjetosDRM() {
 
         <div className='relative z-10 flex flex-col gap-6'>
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-          >
-            <span className='text-[#FF671D] flex items-center font-mono text-sm uppercase tracking-widest gap-2'>
-              <div className='w-2 h-2 rounded-full bg-[#FF671D] animate-pulse' />
-              SLIDE 03
-            </span>
-          </motion.div>
-
-          <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15 }}
@@ -355,8 +301,7 @@ export default function Slide03ProjetosDRM() {
               <span className='text-[#FF671D]'>DRM</span>
             </h2>
             <p className='text-[#8FA8BD] text-base leading-relaxed'>
-              Portfólio estratégico da DRM. Passe o mouse para detalhes ou clique
-              para abrir a apresentação completa.
+              Iniciativas DRM de utilização ou construção de plataformas que otimizem o trabalho dos gerentes comerciais.
             </p>
           </motion.div>
 
@@ -378,11 +323,11 @@ export default function Slide03ProjetosDRM() {
         </div>
       </div>
 
-      {/* ── RIGHT PANEL: 5×2 uniform grid, preenche o espaço ── */}
+      {/* ── RIGHT PANEL: 3×2 uniform grid, preenche o espaço ── */}
       <div className='flex-1 h-full relative px-6 py-6 flex'>
         <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#6E2E0E] blur-[200px] opacity-[0.04] pointer-events-none rounded-full' />
 
-        <div className='relative z-10 grid grid-cols-5 grid-rows-2 gap-4 w-full h-full'>
+        <div className='relative z-10 grid grid-cols-3 grid-rows-2 gap-5 w-full h-full'>
           {projects.map((p, i) => (
             <SmallCard
               key={p.id}

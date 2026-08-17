@@ -40,13 +40,6 @@ export default function Slide4Implantacao() {
         <div className="absolute top-1/4 -left-1/2 w-[200%] h-[50%] bg-[#2A1005] blur-[120px] opacity-40 rounded-full pointer-events-none" />
 
         <div className="relative z-10 flex flex-col gap-6">
-          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
-            <span className="text-[#FF671D] flex items-center font-mono text-sm uppercase tracking-widest gap-2">
-              <div className="w-2 h-2 rounded-full bg-[#FF671D] animate-pulse" />
-              SLIDE 09
-            </span>
-          </motion.div>
-
           <div>
             <motion.h2 className="text-4xl font-bold leading-tight mb-4" style={{ textShadow: '0 0 30px rgba(255,103,29,0.2)' }}>
               Fator de <br/> <span className="text-[#FF671D]">Complexidade</span>

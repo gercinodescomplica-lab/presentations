@@ -45,9 +45,9 @@ const projects = [
     id: 'licit-monitor',
     Icon: Search,
     name: 'LicitMonitor',
-    tagline: 'Automação · Licitações Públicas',
+    tagline: 'Automação · Contratos Vencendo',
     description:
-      'Plataforma que consolida, analisa e acompanha licitações automaticamente — eliminando busca manual site a site.',
+      'Plataforma que consolida, analisa e acompanha contratos que estão vencendo automaticamente — eliminando busca manual site a site.',
     color: '#09DFAB',
     href: 'https://licitmonitor.com',
   },

@@ -58,13 +58,6 @@ export default function Slide5Parcerias() {
         <div className="absolute top-1/4 -left-1/2 w-[200%] h-[50%] bg-[#2A1005] blur-[120px] opacity-40 rounded-full pointer-events-none" />
 
         <div className="relative z-10 flex flex-col gap-8">
-          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
-            <span className="text-[#FF671D] flex items-center font-mono text-sm uppercase tracking-widest gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#FF671D] animate-pulse inline-block" />
-              SLIDE 04
-            </span>
-          </motion.div>
-
           <div>
             <motion.h2
               initial={{ opacity: 0, y: 16 }}

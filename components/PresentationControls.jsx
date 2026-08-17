@@ -121,20 +121,6 @@ export default function PresentationControls({
         </div>
       </motion.div>
 
-      {/* Presentation mode indicator */}
-      <AnimatePresence>
-        {isPresenting && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            className="fixed top-6 right-6 z-50 flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#2F80FF]/10 border border-[#2F80FF]/20 text-[#2F80FF] text-xs font-medium"
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-[#2F80FF] animate-pulse" />
-            {t('nav.presenting')}
-          </motion.div>
-        )}
-      </AnimatePresence>
     </>
   )
 }

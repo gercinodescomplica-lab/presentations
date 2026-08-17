@@ -1,219 +1,209 @@
 import { motion } from 'framer-motion'
+import { TrendingUp, Flag } from 'lucide-react'
 
-export default function Slide07FaturamentoMensal() {
-  const data = [
-    { label: 'GRC - 1',
-      janP: '10.490.843,6', janR: '5.963.704,84',  janRes: '(4.527.138,74)',
-      fevP: '10.490.843,6', fevR: '6.637.085,2',   fevRes: '(3.853.758,4)',
-      marP: '10.490.843,6', marR: '6.330.266,9',   marRes: '(4.160.576,7)',
-      triP: '31.472.530,8', triR: '18.931.056,9',  triRes: '(12.541.473,9)' },
-    { label: 'GRC - 2',
-      janP: '8.601.259,7',  janR: '5.033.741,97',  janRes: '(3.567.517,70)',
-      fevP: '8.601.259,7',  fevR: '6.306.893,5',   fevRes: '(2.294.366,2)',
-      marP: '8.601.259,7',  marR: '4.882.081,1',   marRes: '(3.719.178,6)',
-      triP: '25.803.779,0', triR: '16.222.716,5',  triRes: '(9.581.062,5)' },
-    { label: 'GRC - 3',
-      janP: '8.027.908,6',  janR: '5.263.581,25',  janRes: '(2.764.327,33)',
-      fevP: '8.027.908,6',  fevR: '5.581.450,3',   fevRes: '(2.446.458,3)',
-      marP: '8.027.908,6',  marR: '4.529.383,9',   marRes: '(3.498.524,7)',
-      triP: '24.083.725,8', triR: '15.374.415,4',  triRes: '(8.709.310,4)' },
-    { label: 'GRC - 4',
-      janP: '4.959.339,5',  janR: '3.654.064,72',  janRes: '(1.305.274,74)',
-      fevP: '4.959.339,5',  fevR: '3.170.145,0',   fevRes: '(1.789.194,5)',
-      marP: '4.959.339,5',  marR: '2.892.593,0',   marRes: '(2.066.746,5)',
-      triP: '14.878.018,4', triR: '9.716.802,7',   triRes: '(5.161.215,7)' },
-    { label: 'KAM - 1',
-      janP: '15.232.949,6', janR: '6.460.888,16',  janRes: '(8.772.061,42)',
-      fevP: '15.232.949,6', fevR: '6.412.878,2',   fevRes: '(8.820.071,3)',
-      marP: '15.232.949,6', marR: '6.626.686,7',   marRes: '(8.606.262,9)',
-      triP: '45.698.848,8', triR: '19.500.453,1',  triRes: '(26.198.395,7)' },
-    { label: 'KAM - 2',
-      janP: '12.807.479,1', janR: '11.414.192,61', janRes: '(1.393.286,48)',
-      fevP: '12.807.479,1', fevR: '11.736.647,5',  fevRes: '(1.070.831,6)',
-      marP: '12.807.479,1', marR: '11.581.106,9',  marRes: '(1.226.372,2)',
-      triP: '38.422.437,3', triR: '34.731.947,0',  triRes: '(3.690.490,3)' },
-    { label: 'KAM - 3',
-      janP: '6.122.730,9',  janR: '2.856.516,62',  janRes: '(3.266.214,30)',
-      fevP: '6.122.730,9',  fevR: '3.644.243,0',   fevRes: '(2.478.488,0)',
-      marP: '6.122.730,9',  marR: '3.955.363,4',   marRes: '(2.167.367,5)',
-      triP: '18.368.192,8', triR: '10.456.123,0',  triRes: '(7.912.069,8)' },
-    { label: 'KAM - 4',
-      janP: '7.836.724,7',  janR: '8.852.636,91',  janRes: '1.015.912,24',
-      fevP: '7.836.724,7',  fevR: '7.666.895,5',   fevRes: '(169.829,2)',
-      marP: '7.836.724,7',  marR: '8.117.129,3',   marRes: '280.404,6',
-      triP: '23.510.174,0', triR: '24.636.661,7',  triRes: '1.126.487,7' },
-    { label: 'GRC - CC',
-      janP: '4.073.355,8',  janR: '671.853,1',     janRes: '(3.401.502,76)',
-      fevP: '4.073.355,8',  fevR: '668.912,1',     fevRes: '(3.404.443,8)',
-      marP: '4.073.355,8',  marR: '668.912,1',     marRes: '(3.404.443,8)',
-      triP: '12.220.067,5', triR: '2.009.677,2',   triRes: '(10.210.390,3)' },
-    { label: 'GRC- NOVOS NEG.',
-      janP: '10.833.333,4', janR: '-',             janRes: '(10.833.333,44)',
-      fevP: '10.833.333,4', fevR: '-',             fevRes: '(10.833.333,4)',
-      marP: '10.833.333,4', marR: '-',             marRes: '(10.833.333,4)',
-      triP: '32.500.000,3', triR: '-',             triRes: '(32.500.000,3)' },
-  ]
+type YearBar = {
+  year: string
+  value: number
+  label: string
+  growth?: string
+  isMeta?: boolean
+  isPartial?: boolean
+  hint?: string
+}
 
-  const cols = 'minmax(108px, 1fr) repeat(12, 1fr)'
+const META_2026 = 1000
 
-  const cell = 'flex items-center justify-center text-center border-r border-[#1E4870] last:border-r-0 px-0.5'
-  const cellL = 'flex items-center px-2 border-r border-[#1E4870]'
+const bars: YearBar[] = [
+  { year: '2021', value: 342, label: 'R$ 342 Mi', growth: '+14%' },
+  { year: '2022', value: 423, label: 'R$ 423 Mi', growth: '+23%' },
+  { year: '2023', value: 447, label: 'R$ 447 Mi', growth: '+6%' },
+  { year: '2024', value: 571, label: 'R$ 571 Mi', growth: '+28%' },
+  { year: '2025', value: 630, label: 'R$ 630 Mi', growth: '+10%' },
+  { year: '2026', value: 364, label: 'R$ 364 Mi', hint: 'Até Julho', isPartial: true },
+  { year: 'Meta 2026', value: META_2026, label: 'R$ 1,00 Bi', growth: '+59%', isMeta: true },
+]
 
-  const neg = (v: string) => v.startsWith('(') || (v.startsWith('-') && v.length > 1)
-  const resColor = (v: string) =>
-    v === '-' ? 'text-[#8FA8BD]' : neg(v) ? 'text-red-400 italic' : 'text-green-400 italic'
+const maxValue = Math.max(...bars.map((b) => b.value))
 
-  const Row = ({ children, className = '' }: { children: React.ReactNode; className?: string }) => (
-    <div
-      className={`flex-1 flex min-h-0 divide-x divide-[#1E4870]/0 border-b border-[#1E4870]/30 last:border-b-0 ${className}`}
-      style={{ display: 'grid', gridTemplateColumns: cols, alignItems: 'stretch' }}
-    >
-      {children}
-    </div>
-  )
-
+export default function Slide8EvolucaoHistorica() {
   return (
-    <div className="w-full h-full bg-[#002B48] text-white overflow-hidden p-4 flex flex-col gap-2">
+    <div className="w-full h-full flex bg-[#002B48] text-white overflow-hidden font-sans">
 
-      {/* ── HEADER ── */}
-      <div className="flex justify-between items-center px-1 shrink-0">
-        <div className="flex flex-col">
-          <span className="text-[#FF671D] font-mono text-[10px] uppercase tracking-widest flex items-center gap-2">
-            <div className="w-1.5 h-1.5 rounded-full bg-[#FF671D] animate-pulse" />
-            SLIDE 07
-          </span>
-          <h2 className="text-xl font-bold leading-tight">
-            Faturamentos <span className="text-[#FF671D]">Previstos x Realizados</span>
-          </h2>
-        </div>
-        <div className="bg-[#001F35] border border-[#1E4870] px-5 py-1.5 rounded-xl">
-          <span className="text-[10px] uppercase text-[#8FA8BD] block">Diferença Acumulada 1º Tri</span>
-          <span className="text-base font-bold text-red-500 font-mono">- R$ 115.377.921,10</span>
+      {/* ── PAINEL ESQUERDO ── */}
+      <div
+        className="w-[26%] h-full flex flex-col justify-between p-10 relative border-r border-[#1E4870] shrink-0"
+        style={{ backgroundColor: '#001F35' }}
+      >
+        <div className="absolute top-1/4 -left-1/2 w-[200%] h-[50%] bg-[#2A1005] blur-[120px] opacity-40 rounded-full pointer-events-none" />
+
+        <div className="relative z-10 flex flex-col gap-6">
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.1 }}
+            className="text-[#4A6580] text-xs font-mono uppercase tracking-widest"
+          >
+            Série Histórica · 2021 → 2026
+          </motion.p>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15 }}
+            className="text-4xl font-bold leading-tight"
+            style={{ textShadow: '0 0 30px rgba(255,103,29,0.2)' }}
+          >
+            Evolução <br />
+            <span className="text-[#FF671D]">Faturamento</span>
+          </motion.h2>
+
+          <div className="p-5 rounded-2xl border border-[#FF671D]/30 bg-[#FF671D]/5 flex flex-col gap-2">
+            <div className="flex items-center gap-2 text-[#FF671D] font-bold text-xs uppercase tracking-wider">
+              <Flag className="w-4 h-4" /> Meta 2026
+            </div>
+            <div className="text-4xl font-bold text-white tracking-tighter">R$ 1,00 Bi</div>
+            <div className="text-[#8FA8BD] text-xs leading-snug">
+              +59% sobre 2025 — o maior salto planejado da série.
+            </div>
+          </div>
+
+          <div className="p-4 rounded-2xl border border-[#1E4870] bg-[#1E4870]/30 flex flex-col gap-1">
+            <div className="flex items-center gap-2 text-[#8FA8BD] font-bold text-xs uppercase tracking-wider">
+              <TrendingUp className="w-4 h-4" /> Crescimento médio 5 anos
+            </div>
+            <div className="text-2xl font-bold text-white tracking-tight">+16% a.a.</div>
+            <div className="text-[#8FA8BD] text-xs leading-snug">
+              Se mantido esse ritmo, 2026 fecharia ≈ R$ 737 Mi.
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* ── TABELA ── */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.98 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="flex-1 min-h-0 bg-[#001F35] border border-[#1E4870] rounded-lg shadow-2xl flex flex-col overflow-hidden"
-      >
-        {/* Cabeçalhos de grupo */}
-        <div
-          className="shrink-0 border-b border-[#1E4870] text-[13px] font-bold"
-          style={{ display: 'grid', gridTemplateColumns: cols }}
-        >
-          <div className="bg-[#FFFFCC]/10 text-yellow-200 flex items-center justify-center py-2.5 border-r border-[#1E4870]">Clientes</div>
-          <div className="col-span-3 bg-[#000033]/60 text-white flex items-center justify-center border-r border-[#1E4870]">Janeiro</div>
-          <div className="col-span-3 bg-[#80FF00]/10 text-green-300 flex items-center justify-center border-r border-[#1E4870]">Fevereiro</div>
-          <div className="col-span-3 bg-[#FF9933]/10 text-orange-300 flex items-center justify-center border-r border-[#1E4870]">Março</div>
-          <div className="col-span-3 bg-[#FFFF00]/10 text-yellow-300 flex items-center justify-center">Total 1 TRIMESTRE 2026</div>
-        </div>
+      {/* ── PAINEL DIREITO — Gráfico ── */}
+      <div className="flex-1 h-full relative px-10 py-10 flex flex-col gap-6">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#6E2E0E] blur-[200px] opacity-[0.05] pointer-events-none rounded-full" />
 
-        {/* Cabeçalho de colunas */}
-        <div
-          className="shrink-0 border-b border-[#1E4870] text-[11px] font-bold text-[#8FA8BD] text-center"
-          style={{ display: 'grid', gridTemplateColumns: cols }}
-        >
-          <div className="py-1.5 border-r border-[#1E4870]" />
-          {[
-            'Jan Previsto','Jan Realizado','Jan Resultado',
-            'Fev Previsto','Fev Realizado','Fev Resultado',
-            'Mar Previsto','Mar Realizado','Mar Resultado',
-            'Previsto','Realizado','Resultado',
-          ].map((h, i) => (
-            <div key={i} className={`py-1.5 flex items-center justify-center border-r border-[#1E4870] last:border-r-0 ${i >= 9 ? 'bg-[#FFFF00]/5 text-yellow-100' : ''}`}>
-              {h}
+        <div className="relative z-10 flex justify-between items-end">
+          <h3 className="text-2xl font-bold text-white">Faturamento anual · Realizado vs. Meta</h3>
+          <div className="flex gap-4 text-[11px] font-mono uppercase tracking-widest">
+            <div className="flex items-center gap-2 text-[#8FA8BD]">
+              <span className="w-3 h-3 rounded-sm bg-[#8FA8BD]" /> Realizado
             </div>
-          ))}
-        </div>
-
-        {/* ── CORPO — flex-1 com linhas distribuídas ── */}
-        <div className="flex-1 min-h-0 flex flex-col text-[13px]">
-
-          {/* Total Geral */}
-          <Row className="bg-[#00FFFF]/10 font-bold text-[13px] shrink-0">
-            <div className={`${cellL} text-[#FF671D]`}>Total Geral 2026</div>
-            <div className={cell}>88.985.924,83</div>
-            <div className={cell}>50.171.180,15</div>
-            <div className={`${cell} text-red-400 underline`}>(38.814.744,68)</div>
-            <div className={cell}>88.985.924,83</div>
-            <div className={cell}>51.825.150,15</div>
-            <div className={`${cell} text-red-400 underline`}>(37.160.774,68)</div>
-            <div className={cell}>88.985.924,83</div>
-            <div className={cell}>49.583.523,10</div>
-            <div className={`${cell} text-red-400 underline`}>(39.402.401,73)</div>
-            <div className={`${cell} text-[#FF671D]`}>266.957.774,50</div>
-            <div className={`${cell} text-[#FF671D]`}>151.579.853,40</div>
-            <div className={`${cell} text-red-500 underline bg-red-500/10`}>(115.377.921,10)</div>
-          </Row>
-
-          {/* Gerências */}
-          {data.map((row, idx) => (
-            <Row key={idx} className="hover:bg-white/[0.03] transition-colors">
-              <div className={`${cellL} font-semibold text-white/90`}>{row.label}</div>
-              <div className={`${cell} text-[#8FA8BD]`}>{row.janP}</div>
-              <div className={cell}>{row.janR}</div>
-              <div className={`${cell} ${resColor(row.janRes)}`}>{row.janRes}</div>
-              <div className={`${cell} text-[#8FA8BD]`}>{row.fevP}</div>
-              <div className={cell}>{row.fevR}</div>
-              <div className={`${cell} ${resColor(row.fevRes)}`}>{row.fevRes}</div>
-              <div className={`${cell} text-[#8FA8BD]`}>{row.marP}</div>
-              <div className={cell}>{row.marR}</div>
-              <div className={`${cell} ${resColor(row.marRes)}`}>{row.marRes}</div>
-              <div className={`${cell} font-bold text-[#8FA8BD]`}>{row.triP}</div>
-              <div className={`${cell} font-bold text-[#FF671D]`}>{row.triR}</div>
-              <div className={`${cell} font-bold ${resColor(row.triRes)}`}>{row.triRes}</div>
-            </Row>
-          ))}
-        </div>
-
-        {/* ── RODAPÉ ── */}
-        <div className="shrink-0 border-t-2 border-[#1E4870]">
-
-          {/* Previsão da Diretoria */}
-          <div
-            className="bg-[#00FFFF]/5 text-[12px] font-bold text-center italic border-b border-[#1E4870]"
-            style={{ display: 'grid', gridTemplateColumns: cols }}
-          >
-            <div className="text-left px-2 py-2 text-[#00FFFF]/80 border-r border-[#1E4870]">Previsão da Diretoria</div>
-            <div className="py-2 flex items-center justify-center border-r border-[#1E4870]">88.985.924,8</div>
-            <div className="py-2 flex items-center justify-center border-r border-[#1E4870]">-</div>
-            <div className="py-2 border-r border-[#1E4870]" />
-            <div className="py-2 flex items-center justify-center border-r border-[#1E4870]">88.985.924,8</div>
-            <div className="py-2 flex items-center justify-center border-r border-[#1E4870]">-</div>
-            <div className="py-2 border-r border-[#1E4870]" />
-            <div className="py-2 flex items-center justify-center border-r border-[#1E4870]">88.985.924,8</div>
-            <div className="py-2 flex items-center justify-center border-r border-[#1E4870]">-</div>
-            <div className="py-2 border-r border-[#1E4870]" />
-            <div className="py-2 flex items-center justify-center border-r border-[#1E4870] text-white">266.957.774,5</div>
-            <div className="py-2 flex items-center justify-center border-r border-[#1E4870] text-white">151.579.853,4</div>
-            <div className="py-2" />
-          </div>
-
-          {/* Diferença Apurada */}
-          <div
-            className="bg-white text-[12px] font-extrabold text-center"
-            style={{ display: 'grid', gridTemplateColumns: cols }}
-          >
-            <div className="text-left px-2 py-2.5 text-black border-r border-black/10 uppercase tracking-wide">Diferença Apurada</div>
-            <div className="py-2.5 border-r border-black/10" />
-            <div className="py-2.5 flex items-center justify-center border-r border-black/10 text-red-600 bg-red-100">(38.814.744,7)</div>
-            <div className="py-2.5 border-r border-black/10" />
-            <div className="py-2.5 border-r border-black/10" />
-            <div className="py-2.5 flex items-center justify-center border-r border-black/10 text-red-600 bg-red-100">(37.160.774,7)</div>
-            <div className="py-2.5 border-r border-black/10" />
-            <div className="py-2.5 border-r border-black/10" />
-            <div className="py-2.5 flex items-center justify-center border-r border-black/10 text-red-600 bg-red-100">(39.402.401,7)</div>
-            <div className="py-2.5 border-r border-black/10" />
-            <div className="py-2.5 flex items-center justify-center border-r border-black/10 text-black">-</div>
-            <div className="py-2.5 border-r border-black/10" />
-            <div className="py-2.5 flex items-center justify-center text-white bg-red-600 font-mono">
-              (115.377.921,1)
+            <div className="flex items-center gap-2 text-[#FF671D]">
+              <span className="w-3 h-3 rounded-sm bg-[#FF671D]" /> 2026 Parcial
+            </div>
+            <div className="flex items-center gap-2 text-white">
+              <span className="w-3 h-3 rounded-sm border-2 border-dashed border-white" /> Meta
             </div>
           </div>
         </div>
-      </motion.div>
+
+        {/* Chart */}
+        <div className="flex-1 relative z-10 rounded-3xl border border-[#1E4870] bg-[#001F35]/60 p-8 shadow-[0_0_50px_rgba(0,0,0,0.3)] flex flex-col">
+          <div className="flex-1 flex items-end justify-between gap-4 relative">
+            {/* Grid lines */}
+            {[0.25, 0.5, 0.75, 1].map((frac) => (
+              <div
+                key={frac}
+                className="absolute left-0 right-0 border-t border-[#1E4870]/40 pointer-events-none"
+                style={{ bottom: `${frac * 100}%` }}
+              >
+                <span className="absolute -top-2 -left-2 text-[9px] font-mono text-[#4A6580]">
+                  {Math.round(frac * maxValue)}
+                </span>
+              </div>
+            ))}
+
+            {bars.map((b, i) => {
+              const heightPct = (b.value / maxValue) * 100
+              const isMeta = b.isMeta
+              const isPartial = b.isPartial
+              const barColor = isMeta ? 'transparent' : isPartial ? '#FF671D' : '#8FA8BD'
+              return (
+                <div key={b.year} className="flex-1 flex flex-col items-center justify-end gap-2 relative h-full">
+                  {/* Growth pill — só para barras realizadas (não isMeta) */}
+                  {b.growth && !isMeta && (
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 0.9 + i * 0.08 }}
+                      className="text-[10px] font-mono font-bold text-[#22c55e] absolute -top-1"
+                    >
+                      {b.growth}
+                    </motion.div>
+                  )}
+
+                  {/* Value label */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.7 + i * 0.08 }}
+                    className={`flex flex-col items-center z-10 ${
+                      isMeta ? 'text-white' : isPartial ? 'text-[#FF671D]' : 'text-white'
+                    }`}
+                    style={{ marginBottom: 4 }}
+                  >
+                    <span className="text-sm font-mono font-bold">{b.label}</span>
+                    {isMeta && b.growth && (
+                      <span className="text-[9px] font-mono uppercase tracking-widest text-[#FF671D]/90 mt-0.5">
+                        {b.growth} vs 2025
+                      </span>
+                    )}
+                    {isPartial && b.hint && (
+                      <span className="text-[9px] font-mono uppercase tracking-widest text-[#FF671D]/80 mt-0.5">
+                        {b.hint}
+                      </span>
+                    )}
+                  </motion.div>
+
+                  {/* Bar */}
+                  <motion.div
+                    initial={{ height: 0 }}
+                    animate={{ height: `${heightPct}%` }}
+                    transition={{ delay: 0.35 + i * 0.08, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+                    className="w-full max-w-[70px] rounded-t-lg relative"
+                    style={{
+                      background: isMeta
+                        ? 'transparent'
+                        : isPartial
+                        ? 'linear-gradient(180deg, #FF671D 0%, rgba(255,103,29,0.4) 100%)'
+                        : 'linear-gradient(180deg, #8FA8BD 0%, rgba(143,168,189,0.3) 100%)',
+                      border: isMeta ? '2px dashed rgba(255,255,255,0.7)' : 'none',
+                      boxShadow: isPartial
+                        ? '0 0 20px rgba(255,103,29,0.35)'
+                        : isMeta
+                        ? '0 0 20px rgba(255,255,255,0.15)'
+                        : 'none',
+                    }}
+                  />
+
+                  {/* Year label */}
+                  <div
+                    className={`text-xs font-mono tracking-widest ${
+                      isMeta ? 'text-[#FF671D] font-bold' : 'text-[#8FA8BD]'
+                    }`}
+                  >
+                    {b.year}
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+
+        {/* Rodapé — leitura */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.1, duration: 0.5 }}
+          className="relative z-10 rounded-xl px-5 py-3 border border-[#1E4870] bg-[#001F35]/60 text-[13px] text-[#8FA8BD] leading-snug"
+        >
+          <span className="text-[#FF671D] font-bold">Leitura:</span>{' '}
+          o ritmo de 2026 até Julho está compatível com 2025 (praticamente flat).
+          O gap de -16,5% vs. a meta é consequência de um salto planejado de
+          +59% — muito acima da média histórica de +16% ao ano.
+        </motion.div>
+      </div>
     </div>
   )
 }

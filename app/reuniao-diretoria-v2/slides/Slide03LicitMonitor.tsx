@@ -16,14 +16,7 @@ export default function Slide03LicitMonitor() {
           
           {/* HEADER SECTION */}
           <div className="mb-8">
-            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
-              <span className="text-[#FF671D] flex items-center font-mono text-sm uppercase tracking-widest gap-2 mb-4">
-                <span className="w-2 h-2 rounded-full bg-[#FF671D] animate-pulse inline-block" />
-                SLIDE 03
-              </span>
-            </motion.div>
-
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15 }}
