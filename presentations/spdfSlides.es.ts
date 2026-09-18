@@ -1,31 +1,27 @@
 import Slide01Cover from '@/app/spdf/es/slides/Slide01Cover'
-import Slide01aCampoLimpo from '@/app/spdf/es/slides/Slide01aCampoLimpo'
-import Slide02Problem from '@/app/spdf/es/slides/Slide02Problem'
-import Slide03Opportunity from '@/app/spdf/es/slides/Slide03Opportunity'
-import Slide04Solution from '@/app/spdf/es/slides/Slide04Solution'
-import Slide05Features from '@/app/spdf/es/slides/Slide05Features'
-import Slide06Security from '@/app/spdf/es/slides/Slide06Security'
-import Slide07Architecture from '@/app/spdf/es/slides/Slide07Architecture'
-import Slide08Roadmap from '@/app/spdf/es/slides/Slide08Roadmap'
-import Slide09BusinessModel from '@/app/spdf/es/slides/Slide09BusinessModel'
-import Slide10RevenueROI from '@/app/spdf/es/slides/Slide10RevenueROI'
-import Slide11Risks from '@/app/spdf/es/slides/Slide11Risks'
-import Slide12NextSteps from '@/app/spdf/es/slides/Slide12NextSteps'
+import Slide02CampoLimpo from '@/app/spdf/es/slides/Slide02CampoLimpo'
+import Slide03CentralPitch from '@/app/spdf/es/slides/Slide03CentralPitch'
+import Slide04Problem from '@/app/spdf/es/slides/Slide04Problem'
+import Slide05Solution from '@/app/spdf/es/slides/Slide05Solution'
+import Slide06Journey from '@/app/spdf/es/slides/Slide06Journey'
+import Slide07PricingTiers from '@/app/spdf/es/slides/Slide07PricingTiers'
+import Slide08FinancialScale from '@/app/spdf/es/slides/Slide08FinancialScale'
+import Slide09Segmentation from '@/app/spdf/es/slides/Slide09Segmentation'
+import Slide10Objections from '@/app/spdf/es/slides/Slide10Objections'
+import Slide11Closing from '@/app/spdf/es/slides/Slide11Closing'
 
-const spdfSlides = [
+const spdfSlidesEs = [
   Slide01Cover,
-  Slide01aCampoLimpo,
-  Slide02Problem,
-  Slide03Opportunity,
-  Slide04Solution,
-  Slide05Features,
-  Slide06Security,
-  Slide07Architecture,
-  Slide08Roadmap,
-  Slide09BusinessModel,
-  Slide10RevenueROI,
-  Slide11Risks,
-  Slide12NextSteps,
+  Slide02CampoLimpo,
+  Slide03CentralPitch,
+  Slide04Problem,
+  Slide05Solution,
+  Slide06Journey,
+  Slide07PricingTiers,
+  Slide08FinancialScale,
+  Slide09Segmentation,
+  Slide10Objections,
+  Slide11Closing,
 ]
 
-export default spdfSlides
+export default spdfSlidesEs
